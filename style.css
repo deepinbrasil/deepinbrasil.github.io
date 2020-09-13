@@ -14,8 +14,8 @@
 		color: white;
 		padding: 14px;
 		font-size: 14px;
-		border-radius: 100px;
 		border: none;
+		border-radius: 100px;
 		cursor: pointer;
 	}
 	.dropdown {
@@ -26,21 +26,19 @@
 		display: none;
 		position: absolute;
 		background-color: #ffffff;
-		font-size: 14px;
 		border-radius: 25px;
 		z-index: 1;
 		text-align: left;
-		width: 100%;
+		max-width: 100%;
 	}
 	.dropdown-content a {
-		display: block;
 		color: black;
+		display: block;
 		padding: 14px;
 		border-radius: 100px;
 		text-decoration: none;
-		width: 100%;
+		max-width: 100%;
 		overflow: auto;
-		
 	}
 	.dropdown-content a:hover {background-color: #ffdf00;}
 	.dropdown:hover .dropdown-content {display: block;}
