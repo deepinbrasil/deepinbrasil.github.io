@@ -2,12 +2,12 @@
 	h3 a:link {
 	  color: white;
 	  background-color: transparent;
-	  text-decoration: none;
+	  text-decoration: no-underline;
 	}
 	h3 a:visited {
 	  color: white;
 	  background-color: transparent;
-	  text-decoration: none;
+	  text-decoration: no-underline;
 	}
 	.dropbtn {
 		background-color: #002776;
