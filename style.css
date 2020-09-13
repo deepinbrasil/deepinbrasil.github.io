@@ -1,4 +1,8 @@
 <style>
+	p.paragraph {
+		color: #ffffff;
+		font-size: 18px;
+	}
 	a:hover {
 		text-decoration: none !important;
 		color: #ffffff;
