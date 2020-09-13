@@ -12,10 +12,11 @@
 	.dropbtn {
 		background-color: #002776;
 		color: white;
+		min-width: 150px;
 		padding: 14px;
 		font-size: 14px;
 		border: none;
-		border-radius: 15px;
+		border-radius: 50px;
 	}
 	.dropdown {
 		position: relative;
