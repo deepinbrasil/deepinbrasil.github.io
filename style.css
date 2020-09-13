@@ -1,9 +1,5 @@
 <style>
-	a:link a:visited {
-		color: #ffffff;
-		text-decoration: none;
-	}
-	a:active {
+	a:link, a:visited, a:active {
 		color: #ffffff;
 		text-decoration: none;
 	}
