@@ -21,12 +21,12 @@
 	.dropdown {
 		position: relative;
 		display: inline-block;
-		box-shadow: 0 10px 10px #f9f9f9;
 	}
 	.dropdown-content {
 		display: none;
 		position: absolute;
 		background-color: #ffffff;
+		background: transparent;
 		border-radius: 25px;
 		z-index: 1;
 		text-align: left;
@@ -40,7 +40,6 @@
 		border-radius: 100px;
 		text-decoration: none;
 		max-width: 100%;
-		overflow: auto;
 	}
 	.dropdown-content a:hover {background-color: #ffdf00;}
 	.dropdown:hover .dropdown-content {display: block;}
