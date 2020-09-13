@@ -29,8 +29,8 @@
 		font-size: 14px;
 		border-radius: 25px;
 		z-index: 1;
-		text-align:left;
-		display: none;
+		text-align: left;
+		width: 100%;
 	}
 	.dropdown-content a {
 		display: block;
