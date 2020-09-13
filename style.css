@@ -1,7 +1,7 @@
 <style>
-	body {
+	html, body, h1, h2, h3, h4, h5, h6 {
 		color: red;
-		font-family: Georgia;
+		font-family: "Comic Sans MS", cursive, sans-serif;
 		font-weight: bold;
 	}
 	.dropbtn {
