@@ -1,12 +1,15 @@
 <style>
-	a:link a:visited a:active {
-		color: white;
-		background-color: transparent;
+	a:link a:visited {
+		color: #ffffff;
+		text-decoration: none;
+	}
+	a:active {
+		color: #ffffff;
 		text-decoration: none;
 	}
 	.dropbtn {
 		background-color: #002776;
-		color: white;
+		color: #ffffff;
 		padding: 14px;
 		font-size: 14px;
 		border: none;
