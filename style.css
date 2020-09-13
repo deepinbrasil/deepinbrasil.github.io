@@ -1,9 +1,14 @@
 <style>
-	html, body, h3 {
-		display: block;
-		color: red;
-		font-family: "Comic Sans MS", cursive, sans-serif;
-		font-weight: bold;
+	a:link {
+		text-decoration: none;
+		color: #ffffff;
+	}
+	a:active {
+		text-decoration: none;
+	}
+	a:visited {
+		text-decoration: none;
+		color: #ffffff;
 	}
 	.dropbtn {
 		background-color: #002776;
