@@ -21,7 +21,7 @@
 	.dropdown {
 		position: relative;
 		display: inline-block;
-		box-shadow: 0 10px 10px #666;
+		box-shadow: 0 10px 10px #f9f9f9;
 	}
 	.dropdown-content {
 		display: none;
