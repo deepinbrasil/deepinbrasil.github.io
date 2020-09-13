@@ -1,18 +1,10 @@
 <style>
-	a:link {
-		text-decoration: none;
-		color: #ffffff;
-	}
-	a:active {
-		text-decoration: none;
-		color: #ffffff;
-	}
-	a:visited {
+	a, a:active, a:visited {
 		text-decoration: none;
 		color: #ffffff;
 	}
 	a:hover {
-		text-decoration: underline;
+		text-decoration: none;
 		color: #ffffff;
 		font-weight: bold;
 	}
