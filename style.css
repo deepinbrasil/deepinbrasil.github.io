@@ -15,6 +15,8 @@ a:hover {
   color: #ffdf00;
   font-size: 20px;
   font-weight: bold;
+  border: 10px solid #136497;
+  border-radius: 50%;
 }
 .dropbtn {
   background-color: #002776;
