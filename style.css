@@ -8,6 +8,8 @@
 	  color: white;
 	  background-color: transparent;
 	  text-decoration: none;
+	a:hover {
+	  text-decoration:bold;
 	}
 	.dropbtn {
 		background-color: #002776;
