@@ -41,6 +41,9 @@
 		text-decoration: none;
 		max-width: 100%;
 	}
+	.dropdown-content a:hover { 
+		font-weight: bold;
+	}
 	.dropdown-content a:hover {background-color: #ffdf00;}
 	.dropdown:hover .dropdown-content {display: block;}
 	.dropdown:hover .dropbtn {background-color: #009c3b;}
