@@ -1,12 +1,13 @@
 <style>
-	a {
-		text-decoration: none !important;
+	a:link, a:visited {
+		text-decoration: none;
 		color: #ffffff;
 	}
-	p {
-		text-decoration: none !important;
+	a:active {
+		text-decoration: none;
 		color: #ffffff;
 	}
+
 	a:hover {
 		text-decoration: none;
 		color: #ffffff;
