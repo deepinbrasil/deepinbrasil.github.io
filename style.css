@@ -1,10 +1,5 @@
 <style>
-	h3 a:link {
-	  color: white;
-	  background-color: transparent;
-	  text-decoration: no-underline;
-	}
-	h3 a:visited {
+	h3 {
 	  color: white;
 	  background-color: transparent;
 	  text-decoration: no-underline;
