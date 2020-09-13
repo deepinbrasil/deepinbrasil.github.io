@@ -1,7 +1,11 @@
 <style>
-	a:link, a:visited, a:active, h3 {
+	a:link, a:visited, a:active {
 		color: #ffffff;
 		text-decoration: none;
+	}
+	h3 {
+		display: block;
+		font-weight: bold;
 	}
 	.dropbtn {
 		background-color: #002776;
