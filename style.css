@@ -14,7 +14,8 @@
 		color: white;
 		padding: 14px;
 		font-size: 14px;
-		border-radius: 75px;
+		border-radius: 100px;
+		border: none;
 	}
 	.dropdown {
 		position: relative;
@@ -23,16 +24,17 @@
 	.dropdown-content {
 		background-color: #ffffff;
 		font-size: 14px;
-		border-radius: 75px;
+		border-radius: 100px;
 		position: absolute;
 		z-index: 1;
 		text-align:left;
+		display: none;
 	}
 	.dropdown-content a {
 		color: black;
 		padding: 14px;
 		display: block;
-		border-radius: 75px;
+		border-radius: 100px;
 	}
 	.dropdown-content a:hover {background-color: #ffdf00;}
 	.dropdown:hover .dropdown-content {display: block;}
