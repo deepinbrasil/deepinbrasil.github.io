@@ -1,15 +1,4 @@
 <style>
-	a.nounderline:link {
-		text-decoration: none;
-		color: #ffffff;
-	}
-	a.nounderline:active {
-		text-decoration: none;
-	}
-	a.nounderline:visited {
-		text-decoration: none;
-		color: #ffffff;
-	}
 	.dropbtn {
 		background-color: #002776;
 		color: #ffffff;
