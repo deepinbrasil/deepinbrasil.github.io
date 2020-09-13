@@ -1,5 +1,6 @@
 <style>
 	p.paragraph {
+		text-decoration: none !important;
 		color: #ffffff;
 		font-size: 18px;
 	}
