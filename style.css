@@ -15,24 +15,6 @@ a:hover {
   font-size: 20px;
   font-weight: bold;
 }
-.container {
-  position: relative;
-  border: 0px;
-  overflow: hidden;
-  width: 200px;
-  margin: 100px;
-}
-.container img {
-  max-width: 100%;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.container:hover img {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
 .dropbtn {
   background-color: #002776;
   color: #ffffff;
