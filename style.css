@@ -26,6 +26,7 @@
 		display: none;
 		position: absolute;
 		background-color: #ffffff;
+		font-size: 14px;
 		border-radius: 25px;
 		z-index: 1;
 		text-align: left;
