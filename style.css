@@ -1,8 +1,8 @@
 <style>
-	h3 {
-	  color: white;
-	  background-color: transparent;
-	  text-decoration: no-underline;
+	a:link a:visited a:active {
+		color: white;
+		background-color: transparent;
+		text-decoration: none;
 	}
 	.dropbtn {
 		background-color: #002776;
