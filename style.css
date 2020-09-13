@@ -17,7 +17,7 @@ a:hover {
 }
 .container {
   position: relative;
-  border: 1px solid #000;
+  border: 0px;
   overflow: hidden;
   width: 400px;
   margin: 100px;
