@@ -16,26 +16,31 @@
 		font-size: 14px;
 		border-radius: 100px;
 		border: none;
+		cursor: pointer;
 	}
 	.dropdown {
 		position: relative;
 		display: inline-block;
 	}
 	.dropdown-content {
+		display: none;
+		position: absolute;
 		background-color: #ffffff;
 		font-size: 14px;
 		border-radius: 25px;
-		position: absolute;
 		z-index: 1;
 		text-align:left;
 		display: none;
 	}
 	.dropdown-content a {
+		display: block;
 		color: black;
 		padding: 14px;
-		display: block;
 		border-radius: 100px;
 		text-decoration: none;
+		width: 100%;
+		overflow: auto;
+		
 	}
 	.dropdown-content a:hover {background-color: #ffdf00;}
 	.dropdown:hover .dropdown-content {display: block;}
