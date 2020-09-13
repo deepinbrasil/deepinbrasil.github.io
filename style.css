@@ -1,13 +1,13 @@
 <style>
-	html {
+	body, html, p {
 		text-decoration: none !important;
 		color: #ffffff;
-		font-size: 20px;
+		font-size: 18px;
 	}
 	a:hover {
 		text-decoration: none !important;
 		color: #ffffff;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: bold;
 	}
 	.dropbtn {
