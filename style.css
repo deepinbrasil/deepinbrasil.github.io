@@ -1,12 +1,12 @@
 <style>
-	a:link {
+	a.nounderline:link {
 		text-decoration: none;
 		color: #ffffff;
 	}
-	a:active {
+	a.nounderline:active {
 		text-decoration: none;
 	}
-	a:visited {
+	a.nounderline:visited {
 		text-decoration: none;
 		color: #ffffff;
 	}
