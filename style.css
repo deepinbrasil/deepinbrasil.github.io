@@ -13,6 +13,7 @@ a:hover {
   text-decoration: italic;
   color: #ffffff;
   font-size: 20px;
+  font-weight: bold;
 }
 .dropbtn {
   background-color: #002776;
