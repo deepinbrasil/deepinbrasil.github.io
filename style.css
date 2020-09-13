@@ -1,6 +1,10 @@
 <style>
+	a {
+		text-decoration: none !important;
+		color: #ffffff;
+	}
 	p {
-		text-decoration: none;
+		text-decoration: none !important;
 		color: #ffffff;
 	}
 	a:hover {
