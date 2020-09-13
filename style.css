@@ -1,11 +1,19 @@
 <style>
+	span.underline {
+		text-decoration: none !important;
+	}
+	a {
+		text-decoration: none !important;
+		color: #ffffff;
+		font-size: 18px;
+	}
 	a:link {
-		text-decoration:none;
+		text-decoration: none !important;
 		color: #ffffff;
 		font-size: 18px;
 	}
 	a:hover {
-		text-decoration: none;
+		text-decoration: none !important;
 		color: #ffffff;
 		font-size: 18px;
 		font-weight: bold;
