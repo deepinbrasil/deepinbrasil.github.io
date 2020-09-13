@@ -17,7 +17,7 @@
 		border: none;
 		border-radius: 100px;
 		cursor: pointer;
-		min-width: 150px;
+		width: 100px;
 	}
 	.dropdown {
 		position: relative;
@@ -30,7 +30,7 @@
 		border-radius: 25px;
 		z-index: 1;
 		text-align: left;
-		min-width: 150px;
+		width: 100px;
 	}
 	.dropdown-content a {
 		color: black;
@@ -39,7 +39,7 @@
 		font-size: 14px;
 		border-radius: 100px;
 		text-decoration: none;
-		min-width: 150px;
+		width: 100px;
 	}
 	.dropdown-content a:hover {background-color: #ffdf00;}
 	.dropdown:hover .dropdown-content {display: block;}
