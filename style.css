@@ -1,11 +1,11 @@
 <style>
-	p.paragraph {
-		text-decoration: none !important;
+	.paragraph {
+		text-decoration: none;
 		color: #ffffff;
 		font-size: 18px;
 	}
 	a:hover {
-		text-decoration: none !important;
+		text-decoration: none;
 		color: #ffffff;
 		font-size: 18px;
 		font-weight: bold;
