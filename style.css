@@ -24,7 +24,7 @@
 	.dropdown-content {
 		background-color: #ffffff;
 		font-size: 14px;
-		border-radius: 50px;
+		border-radius: 25px;
 		position: absolute;
 		z-index: 1;
 		text-align:left;
