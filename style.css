@@ -11,6 +11,7 @@ a:link, a:visited, a:active {
 }
 a:hover {
   color: #ffffff;
+  text-decoration: underline;
   font-size: 20px;
 }
 .dropbtn {
