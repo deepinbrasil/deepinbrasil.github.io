@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   height="1531.3315"
+   width="1531.3315"
+   sodipodi:docname="Medium_Symbol_NoPadding.svg"
+   id="svg70"
+   version="1.1"
+   viewBox="0 0 1531.3315 1531.3315">
+  <metadata
+     id="metadata76">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs74">
+    <inkscape:path-effect
+       background_color="#ffffffff"
+       background="true"
+       hide_mask="false"
+       invert="false"
+       uri="#mask-powermask-path-effect124"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect124"
+       effect="powermask" />
+    <mask
+       id="mask-powermask-path-effect124"
+       maskUnits="userSpaceOnUse">
+      <path
+         d="M -1,-1 H 1532.3315 V 1532.3315 H -1 Z"
+         style="fill:#ffffff;fill-opacity:1"
+         id="mask-powermask-path-effect124_box" />
+      <g
+         style=""
+         transform="matrix(1.1319386,0,0,1.1319386,175.00323,430.21011)"
+         data-name="Layer 2"
+         id="g122">
+        <g
+           data-name="Layer 1"
+           id="g120">
+          <path
+             id="path114"
+             d="m 588.67,296.36 c 0,163.67 -131.78,296.35 -294.33,296.35 C 131.79,592.71 0,460 0,296.36 0,132.72 131.78,0 294.34,0 456.9,0 588.67,132.69 588.67,296.36" />
+          <path
+             id="path116"
+             d="m 911.56,296.36 c 0,154.06 -65.89,279 -147.17,279 -81.28,0 -147.17,-124.94 -147.17,-279 0,-154.06 65.88,-279 147.16,-279 81.28,0 147.17,124.9 147.17,279" />
+          <path
+             id="path118"
+             d="m 1043.63,296.36 c 0,138 -23.17,249.94 -51.76,249.94 -28.59,0 -51.75,-111.91 -51.75,-249.94 0,-138.03 23.17,-249.94 51.75,-249.94 28.58,0 51.76,111.9 51.76,249.94" />
+        </g>
+      </g>
+    </mask>
+    <filter
+       y="-50"
+       x="-50"
+       width="100"
+       height="100"
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="filtermask-powermask-path-effect124"
+       id="mask-powermask-path-effect124_inverse">
+      <feColorMatrix
+         result="fbSourceGraphic"
+         type="saturate"
+         values="1"
+         id="mask-powermask-path-effect124_primitive1" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         id="mask-powermask-path-effect124_primitive2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     inkscape:current-layer="svg70"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:cy="636.29273"
+     inkscape:cx="1032.385"
+     inkscape:zoom="0.2214405"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     id="namedview72"
+     inkscape:window-height="728"
+     inkscape:window-width="1366"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     d="M 1531.3315,765.66577 A 765.66577,765.66577 0 0 1 765.66577,1531.3315 765.66577,765.66577 0 0 1 0,765.66577 765.66577,765.66577 0 0 1 765.66577,0 765.66577,765.66577 0 0 1 1531.3315,765.66577 Z"
+     sodipodi:ry="765.66577"
+     sodipodi:rx="765.66577"
+     sodipodi:cy="765.66577"
+     sodipodi:cx="765.66577"
+     sodipodi:type="arc"
+     inkscape:path-effect="#path-effect124"
+     mask="url(#mask-powermask-path-effect124)"
+     id="path78"
+     style="opacity:1;fill:#ffffff;fill-opacity:1" />
+</svg>
