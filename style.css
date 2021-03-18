@@ -23,12 +23,12 @@ a:hover {
   background-color: #009c3b;
   color: #ffffff;
   padding: 14px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  width: 175px;
+  width: 200px;
 }
 .dropdown {
   position: relative;
@@ -41,7 +41,7 @@ a:hover {
   border-radius: 25px;
   z-index: 1;
   text-align: left;
-  width: 175px;
+  width: 200px;
 }
 .dropdown-content a {
   color: #000000;
