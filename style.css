@@ -27,10 +27,11 @@ a:hover {
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  width: 225px;
+  width: 175px;
 }
 .dropdown {
-  position: relative;
+<!--   position: relative; -->
+  position: center;
   display: inline-block;
 }
 .dropdown-content {
