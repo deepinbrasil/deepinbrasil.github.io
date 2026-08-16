@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<script>document.documentElement.setAttribute('data-theme', (function(){var h=new Date().getHours();return (h>=6&&h<18)?'light':'dark';})());</script>
+<script>(function(){var p;try{p=localStorage.getItem('deepinbrasil-theme')||'auto';}catch(e){p='auto';}var h=new Date().getHours();var r=(p==='auto')?((h>=6&&h<18)?'light':'dark'):p;document.documentElement.setAttribute('data-theme',r);document.documentElement.setAttribute('data-theme-pref',p);})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Código de Conduta — deepin Brasil</title>
@@ -23,11 +23,22 @@
     </a>
     <div class="dock-links">
       <a href="index.html" class="dock-item">Início</a>
-      <a href="coc.html" class="dock-item active">Código de Conduta</a>
       <a href="download.html" class="dock-item">Download</a>
       <a href="translate.html" class="dock-item">Tradução</a>
+      <a href="coc.html" class="dock-item active">Código de Conduta</a>
     </div>
   </nav>
+  <div class="theme-toggle" role="group" aria-label="Tema do site">
+    <button type="button" data-pref="auto" title="Automático (segue o horário)" aria-label="Tema automático">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.4v1.3M4.1 3.5l.95.95M2.2 8h1.3M4.1 12.5l.95-.95" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="8" r="3.4" stroke="currentColor" stroke-width="1.3"/><path d="M8 4.6a3.4 3.4 0 0 1 0 6.8Z" fill="currentColor"/></svg>
+    </button>
+    <button type="button" data-pref="light" title="Tema claro" aria-label="Tema claro">
+      <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3.4" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.2v1.6M8 13.2v1.6M14.8 8h-1.6M2.8 8H1.2M12.7 3.3l-1.1 1.1M4.4 11.6l-1.1 1.1M12.7 12.7l-1.1-1.1M4.4 4.4 3.3 3.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" data-pref="dark" title="Tema escuro" aria-label="Tema escuro">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M13.5 9.8A5.8 5.8 0 0 1 6.2 2.5a5.8 5.8 0 1 0 7.3 7.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
 </div>
 
 <main class="container">

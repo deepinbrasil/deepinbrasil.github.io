@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<script>document.documentElement.setAttribute('data-theme', (function(){var h=new Date().getHours();return (h>=6&&h<18)?'light':'dark';})());</script>
+<script>(function(){var p;try{p=localStorage.getItem('deepinbrasil-theme')||'auto';}catch(e){p='auto';}var h=new Date().getHours();var r=(p==='auto')?((h>=6&&h<18)?'light':'dark'):p;document.documentElement.setAttribute('data-theme',r);document.documentElement.setAttribute('data-theme-pref',p);})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Download — deepin Brasil</title>
@@ -23,11 +23,22 @@
     </a>
     <div class="dock-links">
       <a href="index.html" class="dock-item">Início</a>
-      <a href="coc.html" class="dock-item">Código de Conduta</a>
       <a href="download.html" class="dock-item active">Download</a>
       <a href="translate.html" class="dock-item">Tradução</a>
+      <a href="coc.html" class="dock-item">Código de Conduta</a>
     </div>
   </nav>
+  <div class="theme-toggle" role="group" aria-label="Tema do site">
+    <button type="button" data-pref="auto" title="Automático (segue o horário)" aria-label="Tema automático">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.4v1.3M4.1 3.5l.95.95M2.2 8h1.3M4.1 12.5l.95-.95" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="8" r="3.4" stroke="currentColor" stroke-width="1.3"/><path d="M8 4.6a3.4 3.4 0 0 1 0 6.8Z" fill="currentColor"/></svg>
+    </button>
+    <button type="button" data-pref="light" title="Tema claro" aria-label="Tema claro">
+      <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3.4" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.2v1.6M8 13.2v1.6M14.8 8h-1.6M2.8 8H1.2M12.7 3.3l-1.1 1.1M4.4 11.6l-1.1 1.1M12.7 12.7l-1.1-1.1M4.4 4.4 3.3 3.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" data-pref="dark" title="Tema escuro" aria-label="Tema escuro">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M13.5 9.8A5.8 5.8 0 0 1 6.2 2.5a5.8 5.8 0 1 0 7.3 7.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
 </div>
 
 <main class="container">
@@ -50,18 +61,20 @@
           <button class="arch-tab active" data-arch="amd64">AMD64 <span class="sub">x86_64</span></button>
           <button class="arch-tab" data-arch="arm64">ARM64 <span class="sub">aarch64</span></button>
           <button class="arch-tab" data-arch="loong64">LoongArch <span class="sub">loong64</span></button>
-          <button class="arch-tab" data-arch="riscv64">RISC-V <span class="sub">preview</span></button>
+          <button class="arch-tab" data-arch="riscv64">RISC-V <span class="sub">riscv64</span></button>
         </div>
 
-        <p style="font-size:0.86rem;margin-bottom:2px;">
+        <p style="font-size:0.86rem;margin-bottom:2px;text-align:center;">
           Arquivo: <code id="archFilename">deepin-desktop-community-25.2.0-amd64.iso</code>
           · Tamanho aproximado: <strong id="archSize" style="color:var(--text);">6,5 GB</strong>
         </p>
 
-        <div id="sha256Box" style="margin:10px 0 22px;">
-          <div style="font-size:0.78rem;color:var(--text-faint);margin-bottom:6px;">SHA256</div>
-          <pre style="margin:0;"><code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code></pre>
-          <p style="font-size:0.8rem;margin-top:8px;color:var(--text-muted);">Veja a fonte: <a id="sha256FallbackLink" href="#" target="_blank" rel="noopener" style="color:var(--accent-teal);">SHA256SUMS</a></p>
+        <div id="sha256Box" style="margin:10px 0 22px;text-align:center;">
+          <div style="display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:0.78rem;color:var(--text-faint);flex-shrink:0;">SHA256:</span>
+            <pre style="margin:0;display:inline-block;text-align:left;max-width:100%;"><code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code></pre>
+          </div>
+          <p style="font-size:0.8rem;margin-top:8px;color:var(--text-muted);">Fonte: <a id="sha256FallbackLink" href="#" target="_blank" rel="noopener" style="color:var(--accent-teal);">SHA256SUMS</a></p>
         </div>
 
         <div class="sources-grid">
@@ -75,11 +88,11 @@
           </div>
           <div class="source-card">
             <div class="source-icon">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 17h6M10 14v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="5" cy="5" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="5" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="15" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M6.6 6.3 8.6 13M13.4 6.3 11.4 13M7 5h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
-            <h3>Página oficial</h3>
-            <p>deepin.org — todas as arquiteturas e edições.</p>
-            <a class="source-link" href="https://www.deepin.org/en/download/" target="_blank" rel="noopener">Abrir →</a>
+            <h3>Torrent</h3>
+            <p>Recomendado pela própria deepin — rápido e resistente a instabilidade.</p>
+            <a class="source-link" id="linkTorrent" href="#" target="_blank" rel="noopener">Baixar →</a>
           </div>
           <div class="source-card">
             <div class="source-icon">
@@ -87,12 +100,11 @@
             </div>
             <h3>SourceForge</h3>
             <p>Mirror global, alternativa se o direto estiver lento.</p>
-            <a class="source-link" href="https://sourceforge.net/projects/deepin/files/25.2.0/" target="_blank" rel="noopener">Abrir →</a>
+            <a class="source-link" id="linkSourceForge" href="#" target="_blank" rel="noopener">Abrir →</a>
           </div>
         </div>
       </div>
 
-      <div class="note"><strong>Atenção:</strong> a versão 23 não possui atualização direta para a versão 25. É necessária uma instalação limpa, pois a nova versão adotou o sistema imutável (deepin Solid), que altera a estrutura do sistema base.</div>
 
       <div class="verify-panel">
         <h2>
@@ -153,25 +165,33 @@
       filename: 'deepin-desktop-community-25.2.0-amd64.iso',
       size: '6,5 GB',
       base: 'https://cdimage.deepin.com/releases/25.2.0/amd64/',
-      sha256: 'f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450'
+      sha256: 'f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450',
+      torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-amd64.iso.torrent',
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/amd64/'
     },
     arm64: {
       filename: 'deepin-desktop-community-25.2.0-arm64.iso',
       size: '5,1 GB',
       base: 'https://cdimage.deepin.com/releases/25.2.0/arm64/',
-      sha256: '7c5cb76cec53532313f2b1f435d477a651f9b5f7ca2435dfc12eb7be8d3340fe'
+      sha256: '7c5cb76cec53532313f2b1f435d477a651f9b5f7ca2435dfc12eb7be8d3340fe',
+      torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-arm64.iso.torrent',
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/arm64/'
     },
     loong64: {
       filename: 'deepin-desktop-community-25.2.0-loong64.iso',
       size: '5,9 GB',
       base: 'https://cdimage.deepin.com/releases/25.2.0/loong64/',
-      sha256: '1835726765d5839481572dbdaf8b8fdb5b2403ed8395cbe06f8d509891fb46c1'
+      sha256: '1835726765d5839481572dbdaf8b8fdb5b2403ed8395cbe06f8d509891fb46c1',
+      torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-loong64.iso.torrent',
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/loong64/'
     },
     riscv64: {
       filename: 'deepin-desktop-community-25.2.0-riscv64.iso',
       size: '4,5 GB',
       base: 'https://cdimage.deepin.com/releases/25.2.0/riscv64/',
-      sha256: 'ea5266d13a640eabc3b4cb7b893097a6416c5d457ae10bbd6bde0fc94e3ebe4a'
+      sha256: 'ea5266d13a640eabc3b4cb7b893097a6416c5d457ae10bbd6bde0fc94e3ebe4a',
+      torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-riscv64.iso.torrent',
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/riscv64/'
     }
   };
 
@@ -181,6 +201,8 @@
     document.getElementById('archFilename').textContent = a.filename;
     document.getElementById('archSize').textContent = a.size;
     document.getElementById('linkDirect').href = a.base + a.filename;
+    document.getElementById('linkTorrent').href = a.torrent;
+    document.getElementById('linkSourceForge').href = a.sourceforge;
     var cmdLinux = document.getElementById('cmdFilenameLinux');
     var cmdWin = document.getElementById('cmdFilenameWin');
     if (cmdLinux) cmdLinux.textContent = a.filename;
