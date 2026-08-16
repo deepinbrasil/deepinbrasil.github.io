@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script>document.documentElement.setAttribute('data-theme', (function(){var h=new Date().getHours();return (h>=6&&h<18)?'light':'dark';})());</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download — deepin Brasil</title>
+<meta name="description" content="Baixe o deepin Linux: imagem oficial, torrent e mirrors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div>
+<canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+<div class="dock-wrap">
+  <nav class="dock" aria-label="Navegação principal">
+    <a href="index.html" class="dock-brand">
+      <img src="logo.svg" alt="deepin" class="dock-mark">
+      <span>deepin Brasil</span>
+    </a>
+    <div class="dock-links">
+      <a href="index.html" class="dock-item">Início</a>
+      <a href="coc.html" class="dock-item">Código de Conduta</a>
+      <a href="download.html" class="dock-item active">Download</a>
+      <a href="translate.html" class="dock-item">Tradução</a>
+    </div>
+  </nav>
+</div>
+
+<main class="container">
+  <section class="page-hero">
+    <div class="eyebrow">deepin 25.2</div>
+    <h1>Baixe o deepin</h1>
+    <p class="lede">Escolha a forma mais rápida para você. A deepin Brasil não hospeda arquivos: todos os links abaixo apontam para servidores oficiais.</p>
+
+  </section>
+
+  <section class="section">
+    <div class="content-block" style="max-width:860px;">
+
+      <div class="glass-card" style="padding:30px 32px;">
+        <div class="eyebrow" style="margin-bottom:4px;">Versão estável</div>
+        <h2 style="font-size:1.6rem;margin-bottom:4px;">deepin 25.2.0</h2>
+        <p style="margin-bottom:0;">Lançado em 08/07/2026. Escolha a arquitetura do seu computador:</p>
+
+        <div class="arch-tabs" id="archTabs">
+          <button class="arch-tab active" data-arch="amd64">AMD64 <span class="sub">x86_64</span></button>
+          <button class="arch-tab" data-arch="arm64">ARM64 <span class="sub">aarch64</span></button>
+          <button class="arch-tab" data-arch="loong64">LoongArch <span class="sub">loong64</span></button>
+          <button class="arch-tab" data-arch="riscv64">RISC-V <span class="sub">preview</span></button>
+        </div>
+
+        <p style="font-size:0.86rem;margin-bottom:2px;">
+          Arquivo: <code id="archFilename">deepin-desktop-community-25.2.0-amd64.iso</code>
+          · Tamanho aproximado: <strong id="archSize" style="color:var(--text);">6,5 GB</strong>
+        </p>
+
+        <div id="sha256Box" style="margin:10px 0 22px;">
+          <div style="font-size:0.78rem;color:var(--text-faint);margin-bottom:6px;">SHA256</div>
+          <pre style="margin:0;"><code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code></pre>
+          <p style="font-size:0.8rem;margin-top:8px;color:var(--text-muted);">Veja a fonte: <a id="sha256FallbackLink" href="#" target="_blank" rel="noopener" style="color:var(--accent-teal);">SHA256SUMS</a></p>
+        </div>
+
+        <div class="sources-grid">
+          <div class="source-card">
+            <div class="source-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2v11m0 0-4-4m4 4 4-4M3 15v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Download direto</h3>
+            <p>Servidor oficial internacional (cdimage.deepin.com).</p>
+            <a class="source-link" id="linkDirect" href="#" target="_blank" rel="noopener">Baixar →</a>
+          </div>
+          <div class="source-card">
+            <div class="source-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 17h6M10 14v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Página oficial</h3>
+            <p>deepin.org — todas as arquiteturas e edições.</p>
+            <a class="source-link" href="https://www.deepin.org/en/download/" target="_blank" rel="noopener">Abrir →</a>
+          </div>
+          <div class="source-card">
+            <div class="source-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2 3 5v5c0 4.4 3 7.4 7 8 4-.6 7-3.6 7-8V5l-7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>SourceForge</h3>
+            <p>Mirror global, alternativa se o direto estiver lento.</p>
+            <a class="source-link" href="https://sourceforge.net/projects/deepin/files/25.2.0/" target="_blank" rel="noopener">Abrir →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="note"><strong>Atenção:</strong> a versão 23 não possui atualização direta para a versão 25. É necessária uma instalação limpa, pois a nova versão adotou o sistema imutável (deepin Solid), que altera a estrutura do sistema base.</div>
+
+      <div class="verify-panel">
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2 3 5v5c0 4.4 3 7.4 7 8 4-.6 7-3.6 7-8V5l-7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Verificação de integridade <span style="color:var(--text-faint);font-weight:400;font-size:0.75rem;">(opcional, mas recomendado)</span>
+        </h2>
+        <p>Depois de baixar, rode o comando abaixo (no sistema em que você está agora) e compare o resultado com o hash SHA256 mostrado acima, na seção de download. Se os dois valores forem idênticos, o arquivo baixado está íntegro.</p>
+
+        <div style="font-size:0.78rem;color:var(--text-faint);margin:14px 0 6px;">Linux / macOS — no terminal, na pasta onde está o arquivo:</div>
+        <pre><code>sha256sum <span id="cmdFilenameLinux">deepin-desktop-community-25.2.0-amd64.iso</span></code></pre>
+
+        <div style="font-size:0.78rem;color:var(--text-faint);margin:14px 0 6px;">Windows — no PowerShell, na pasta onde está o arquivo:</div>
+        <pre><code>Get-FileHash .\<span id="cmdFilenameWin">deepin-desktop-community-25.2.0-amd64.iso</span> -Algorithm SHA256</code></pre>
+
+        <p style="font-size:0.86rem;margin-bottom:0;margin-top:14px;">O comando devolve uma sequência de letras e números — é só olhar se bate, letra por letra, com o valor SHA256 mostrado mais acima nesta página. Se for diferente, o download veio corrompido: baixe novamente.</p>
+      </div>
+
+      <div class="download-card">
+        <div>
+          <h3>Requisitos recomendados</h3>
+          <p>Confira a configuração de hardware recomendada antes de instalar.</p>
+        </div>
+        <a class="btn btn-ghost" href="https://www.deepin.org/en/deepin-25-installation/" target="_blank" rel="noopener">Ver requisitos</a>
+      </div>
+
+      <h2 style="margin-top:2.4em;">Pendrive bootável — Ventoy</h2>
+      <p>Pré-requisito: pendrive com no mínimo 8GB.</p>
+      <ol style="color:var(--text-muted);padding-left:1.2em;">
+        <li>Instale o Ventoy a partir do site oficial ou da loja de aplicativos do seu sistema operacional atual.</li>
+        <li>Abra o Ventoy e selecione o pendrive. Nas opções, recomenda-se o uso do estilo de partição GPT (para sistemas UEFI) e a ativação do suporte ao Secure Boot — este último não é obrigatório.</li>
+        <li>Clique em "Instalar" para que o aplicativo prepare o dispositivo e o torne bootável.</li>
+        <li>Copie a imagem ISO do deepin para o pendrive.</li>
+      </ol>
+      <a class="btn btn-ghost" style="align-self:flex-start;" href="https://www.ventoy.net/en/download.html" target="_blank" rel="noopener">Baixar Ventoy</a>
+
+      <div class="note"><strong>Observação:</strong> o Ventoy permite que várias imagens ISO sejam utilizadas no mesmo pendrive, incluindo imagens do Windows. Seu uso não é exclusivo do deepin.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="wordmark.svg" alt="deepin" class="footer-wordmark">
+    </div>
+    <p class="fine-print">© <span id="year"></span> deepin Brasil · Comunidade independente de usuários do deepin Linux.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="theme.js"></script>
+<script src="particles.js"></script>
+<script>
+  // Dados reais de cada arquitetura — release 25.2.0
+  // Ao sair uma versão nova, atualize tudo aqui (filename, size, sha256).
+  var ARCHS = {
+    amd64: {
+      filename: 'deepin-desktop-community-25.2.0-amd64.iso',
+      size: '6,5 GB',
+      base: 'https://cdimage.deepin.com/releases/25.2.0/amd64/',
+      sha256: 'f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450'
+    },
+    arm64: {
+      filename: 'deepin-desktop-community-25.2.0-arm64.iso',
+      size: '5,1 GB',
+      base: 'https://cdimage.deepin.com/releases/25.2.0/arm64/',
+      sha256: '7c5cb76cec53532313f2b1f435d477a651f9b5f7ca2435dfc12eb7be8d3340fe'
+    },
+    loong64: {
+      filename: 'deepin-desktop-community-25.2.0-loong64.iso',
+      size: '5,9 GB',
+      base: 'https://cdimage.deepin.com/releases/25.2.0/loong64/',
+      sha256: '1835726765d5839481572dbdaf8b8fdb5b2403ed8395cbe06f8d509891fb46c1'
+    },
+    riscv64: {
+      filename: 'deepin-desktop-community-25.2.0-riscv64.iso',
+      size: '4,5 GB',
+      base: 'https://cdimage.deepin.com/releases/25.2.0/riscv64/',
+      sha256: 'ea5266d13a640eabc3b4cb7b893097a6416c5d457ae10bbd6bde0fc94e3ebe4a'
+    }
+  };
+
+  function updateArch(archKey) {
+    var a = ARCHS[archKey];
+    if (!a) return;
+    document.getElementById('archFilename').textContent = a.filename;
+    document.getElementById('archSize').textContent = a.size;
+    document.getElementById('linkDirect').href = a.base + a.filename;
+    var cmdLinux = document.getElementById('cmdFilenameLinux');
+    var cmdWin = document.getElementById('cmdFilenameWin');
+    if (cmdLinux) cmdLinux.textContent = a.filename;
+    if (cmdWin) cmdWin.textContent = a.filename;
+    document.getElementById('sha256Value').textContent = a.sha256;
+    document.getElementById('sha256FallbackLink').href = a.base + 'SHA256SUMS';
+  }
+
+  document.querySelectorAll('.arch-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.arch-tab').forEach(function (t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      updateArch(tab.dataset.arch);
+    });
+  });
+
+  updateArch('amd64');
+</script>
+</body>
+</html>

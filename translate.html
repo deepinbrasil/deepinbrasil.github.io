@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script>document.documentElement.setAttribute('data-theme', (function(){var h=new Date().getHours();return (h>=6&&h<18)?'light':'dark';})());</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tradução — deepin Brasil</title>
+<meta name="description" content="Ajude a traduzir o deepin para o português do Brasil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div>
+<canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+<div class="dock-wrap">
+  <nav class="dock" aria-label="Navegação principal">
+    <a href="index.html" class="dock-brand">
+      <img src="logo.svg" alt="deepin" class="dock-mark">
+      <span>deepin Brasil</span>
+    </a>
+    <div class="dock-links">
+      <a href="index.html" class="dock-item">Início</a>
+      <a href="coc.html" class="dock-item">Código de Conduta</a>
+      <a href="download.html" class="dock-item">Download</a>
+      <a href="translate.html" class="dock-item active">Tradução</a>
+    </div>
+  </nav>
+</div>
+
+<main class="container">
+  <section class="page-hero">
+    <div class="eyebrow">Contribua</div>
+    <h1>Tradução</h1>
+    <p class="lede">Todo aplicativo do deepin que você usa em português passou pelas mãos de alguém da comunidade. Ajudar é mais simples do que parece — e não exige saber programar.</p>
+  </section>
+
+  <section class="section">
+    <div class="content-block">
+      <p>Se você tem experiência com tradução, pode contribuir com a equipe brasileira e ajudar a melhorar o suporte ao português do Brasil (pt-BR) no deepin.</p>
+
+      <h2>Projetos no Transifex</h2>
+      <p>Os projetos de tradução estão disponíveis na plataforma Transifex:</p>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="download-card">
+          <div>
+            <h3>Deepin Desktop Environment</h3>
+            <p>Tradução da interface do sistema (DDE).</p>
+          </div>
+          <a class="btn btn-primary" href="https://app.transifex.com/linuxdeepin/teams/3617/pt_BR/" target="_blank" rel="noopener">Abrir no Transifex</a>
+        </div>
+        <div class="download-card">
+          <div>
+            <h3>Deepin Software</h3>
+            <p>Tradução dos aplicativos do deepin.</p>
+          </div>
+          <a class="btn btn-primary" href="https://app.transifex.com/linuxdeepin/teams/3976/pt_BR/" target="_blank" rel="noopener">Abrir no Transifex</a>
+        </div>
+      </div>
+
+      <h2 style="margin-top:2.4em;">Comunidade internacional</h2>
+      <p>Participe da comunidade internacional de tradução no Telegram:</p>
+      <a class="btn btn-ghost" href="https://t.me/+-OAA-A_r2nI4YmI1" target="_blank" rel="noopener">Entrar no grupo do Telegram</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="wordmark.svg" alt="deepin" class="footer-wordmark">
+    </div>
+    <p class="fine-print">© <span id="year"></span> deepin Brasil · Comunidade independente de usuários do deepin Linux.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="theme.js"></script>
+<script src="particles.js"></script>
+</body>
+</html>
