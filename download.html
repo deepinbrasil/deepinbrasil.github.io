@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,6 +24,7 @@
     </a>
     <div class="dock-links">
       <a href="index.html" class="dock-item">Início</a>
+      <a href="features.html" class="dock-item">Recursos</a>
       <a href="download.html" class="dock-item active">Download</a>
       <a href="translate.html" class="dock-item">Tradução</a>
       <a href="coc.html" class="dock-item">Código de Conduta</a>
@@ -64,13 +66,13 @@
           <button class="arch-tab" data-arch="riscv64">RISC-V <span class="sub">riscv64</span></button>
         </div>
 
-        <p style="font-size:0.86rem;margin-bottom:2px;text-align:center;">
+        <p style="font-size:0.86rem;margin-bottom:2px;">
           Arquivo: <code id="archFilename">deepin-desktop-community-25.2.0-amd64.iso</code>
           · Tamanho aproximado: <strong id="archSize" style="color:var(--text);">6,5 GB</strong>
         </p>
 
-        <div id="sha256Box" style="margin:10px 0 22px;text-align:center;">
-          <div style="display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;">
+        <div id="sha256Box" style="margin:10px 0 22px;">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
             <span style="font-size:0.78rem;color:var(--text-faint);flex-shrink:0;">SHA256:</span>
             <pre style="margin:0;display:inline-block;text-align:left;max-width:100%;"><code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code></pre>
           </div>
@@ -114,10 +116,16 @@
         <p>Depois de baixar, rode o comando abaixo (no sistema em que você está agora) e compare o resultado com o hash SHA256 mostrado acima, na seção de download. Se os dois valores forem idênticos, o arquivo baixado está íntegro.</p>
 
         <div style="font-size:0.78rem;color:var(--text-faint);margin:14px 0 6px;">Linux / macOS — no terminal, na pasta onde está o arquivo:</div>
-        <pre><code>sha256sum <span id="cmdFilenameLinux">deepin-desktop-community-25.2.0-amd64.iso</span></code></pre>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <pre style="flex:1;min-width:260px;margin:0;"><code>sha256sum <span id="cmdFilenameLinux">deepin-desktop-community-25.2.0-amd64.iso</span></code></pre>
+          <button class="btn btn-ghost copy-cmd-btn" data-copy-target="cmdLinuxFull" style="padding:9px 16px;font-size:0.8rem;" type="button">Copiar</button>
+        </div>
 
         <div style="font-size:0.78rem;color:var(--text-faint);margin:14px 0 6px;">Windows — no PowerShell, na pasta onde está o arquivo:</div>
-        <pre><code>Get-FileHash .\<span id="cmdFilenameWin">deepin-desktop-community-25.2.0-amd64.iso</span> -Algorithm SHA256</code></pre>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <pre style="flex:1;min-width:260px;margin:0;"><code>Get-FileHash .\<span id="cmdFilenameWin">deepin-desktop-community-25.2.0-amd64.iso</span> -Algorithm SHA256</code></pre>
+          <button class="btn btn-ghost copy-cmd-btn" data-copy-target="cmdWinFull" style="padding:9px 16px;font-size:0.8rem;" type="button">Copiar</button>
+        </div>
 
         <p style="font-size:0.86rem;margin-bottom:0;margin-top:14px;">O comando devolve uma sequência de letras e números — é só olhar se bate, letra por letra, com o valor SHA256 mostrado mais acima nesta página. Se for diferente, o download veio corrompido: baixe novamente.</p>
       </div>
@@ -150,7 +158,7 @@
     <div class="footer-brand">
       <img src="wordmark.svg" alt="deepin" class="footer-wordmark">
     </div>
-    <p class="fine-print">© <span id="year"></span> deepin Brasil · Comunidade independente de usuários do deepin Linux.</p>
+    <p class="fine-print">© <span id="year"></span> deepin Brasil - A comunidade deepin no Brasil</p>
   </div>
 </footer>
 
@@ -167,7 +175,7 @@
       base: 'https://cdimage.deepin.com/releases/25.2.0/amd64/',
       sha256: 'f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450',
       torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-amd64.iso.torrent',
-      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/amd64/'
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/amd64/deepin-desktop-community-25.2.0-amd64.iso/download'
     },
     arm64: {
       filename: 'deepin-desktop-community-25.2.0-arm64.iso',
@@ -175,7 +183,7 @@
       base: 'https://cdimage.deepin.com/releases/25.2.0/arm64/',
       sha256: '7c5cb76cec53532313f2b1f435d477a651f9b5f7ca2435dfc12eb7be8d3340fe',
       torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-arm64.iso.torrent',
-      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/arm64/'
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/arm64/deepin-desktop-community-25.2.0-arm64.iso/download'
     },
     loong64: {
       filename: 'deepin-desktop-community-25.2.0-loong64.iso',
@@ -183,7 +191,7 @@
       base: 'https://cdimage.deepin.com/releases/25.2.0/loong64/',
       sha256: '1835726765d5839481572dbdaf8b8fdb5b2403ed8395cbe06f8d509891fb46c1',
       torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-loong64.iso.torrent',
-      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/loong64/'
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/loong64/deepin-desktop-community-25.2.0-loong64.iso/download'
     },
     riscv64: {
       filename: 'deepin-desktop-community-25.2.0-riscv64.iso',
@@ -191,7 +199,7 @@
       base: 'https://cdimage.deepin.com/releases/25.2.0/riscv64/',
       sha256: 'ea5266d13a640eabc3b4cb7b893097a6416c5d457ae10bbd6bde0fc94e3ebe4a',
       torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-riscv64.iso.torrent',
-      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/riscv64/'
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/riscv64/deepin-desktop-community-25.2.0-riscv64.iso/download'
     }
   };
 
@@ -216,6 +224,26 @@
       document.querySelectorAll('.arch-tab').forEach(function (t) { t.classList.remove('active'); });
       tab.classList.add('active');
       updateArch(tab.dataset.arch);
+    });
+  });
+
+  // Botões "Copiar" dos comandos de verificação (Linux/macOS e Windows).
+  // O texto é montado na hora, já com o nome do arquivo da arquitetura escolhida.
+  document.querySelectorAll('.copy-cmd-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.dataset.copyTarget;
+      var text = '';
+      if (target === 'cmdLinuxFull') {
+        text = 'sha256sum ' + document.getElementById('cmdFilenameLinux').textContent;
+      } else if (target === 'cmdWinFull') {
+        text = 'Get-FileHash .\\' + document.getElementById('cmdFilenameWin').textContent + ' -Algorithm SHA256';
+      }
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(function () {
+        var original = btn.textContent;
+        btn.textContent = 'Copiado!';
+        setTimeout(function () { btn.textContent = original; }, 1500);
+      });
     });
   });
 
