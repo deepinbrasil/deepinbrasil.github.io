@@ -384,6 +384,35 @@ p { color: var(--text-muted); margin: 0 0 1em; }
   .grid-3, .grid-2 { grid-template-columns: 1fr; }
 }
 
+/* ===================== Screenshots ===================== */
+.shot-card {
+  margin: 0;
+  background: var(--surface-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.shot-card:hover { transform: translateY(-3px); border-color: rgba(var(--accent-blue-rgb), 0.4); }
+.shot-card img,
+.shot-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  background: var(--bg-elevated);
+}
+.shot-card figcaption {
+  padding: 12px 16px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
 .tile {
   background: var(--surface-glass);
   border: 1px solid var(--border-glass);

@@ -105,6 +105,37 @@
             <a class="source-link" id="linkSourceForge" href="#" target="_blank" rel="noopener">Abrir →</a>
           </div>
         </div>
+
+        <div style="display:flex;align-items:center;gap:10px;margin:24px 0 16px;">
+          <span style="font-size:0.78rem;color:var(--accent-teal);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Mirrors brasileiros</span>
+          <span style="flex:1;height:1px;background:var(--border-glass);"></span>
+        </div>
+        <div class="sources-grid">
+          <div class="source-card">
+            <div class="source-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2 2 6l8 4 8-4-8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 8v5c0 1.1 2.7 3 6 3s6-1.9 6-3V8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>UNICAMP</h3>
+            <p>Universidade Estadual de Campinas.</p>
+            <a class="source-link" id="linkUnicamp" href="#" target="_blank" rel="noopener">Baixar →</a>
+          </div>
+          <div class="source-card">
+            <div class="source-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2 2 6l8 4 8-4-8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 8v5c0 1.1 2.7 3 6 3s6-1.9 6-3V8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>UFPR</h3>
+            <p>Universidade Federal do Paraná.</p>
+            <a class="source-link" id="linkUfpr" href="#" target="_blank" rel="noopener">Baixar →</a>
+          </div>
+          <div class="source-card">
+            <div class="source-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2 2 6l8 4 8-4-8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 8v5c0 1.1 2.7 3 6 3s6-1.9 6-3V8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>USP</h3>
+            <p>Universidade de São Paulo.</p>
+            <a class="source-link" id="linkUsp" href="#" target="_blank" rel="noopener">Baixar →</a>
+          </div>
+        </div>
       </div>
 
 
@@ -175,7 +206,10 @@
       base: 'https://cdimage.deepin.com/releases/25.2.0/amd64/',
       sha256: 'f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450',
       torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-amd64.iso.torrent',
-      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/amd64/deepin-desktop-community-25.2.0-amd64.iso/download'
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/amd64/deepin-desktop-community-25.2.0-amd64.iso/download',
+      unicamp: 'https://mirrors.ic.unicamp.br/deepin-cd/25.2.0/amd64/',
+      ufpr: 'https://deepin.c3sl.ufpr.br/deepin-cd/25.2.0/amd64/',
+      usp: 'http://sft.if.usp.br/deepin-cd/25.2.0/amd64/'
     },
     arm64: {
       filename: 'deepin-desktop-community-25.2.0-arm64.iso',
@@ -183,7 +217,10 @@
       base: 'https://cdimage.deepin.com/releases/25.2.0/arm64/',
       sha256: '7c5cb76cec53532313f2b1f435d477a651f9b5f7ca2435dfc12eb7be8d3340fe',
       torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-arm64.iso.torrent',
-      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/arm64/deepin-desktop-community-25.2.0-arm64.iso/download'
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/arm64/deepin-desktop-community-25.2.0-arm64.iso/download',
+      unicamp: 'https://mirrors.ic.unicamp.br/deepin-cd/25.2.0/arm64/',
+      ufpr: 'https://deepin.c3sl.ufpr.br/deepin-cd/25.2.0/arm64/',
+      usp: 'http://sft.if.usp.br/deepin-cd/25.2.0/arm64/'
     },
     loong64: {
       filename: 'deepin-desktop-community-25.2.0-loong64.iso',
@@ -191,7 +228,10 @@
       base: 'https://cdimage.deepin.com/releases/25.2.0/loong64/',
       sha256: '1835726765d5839481572dbdaf8b8fdb5b2403ed8395cbe06f8d509891fb46c1',
       torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-loong64.iso.torrent',
-      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/loong64/deepin-desktop-community-25.2.0-loong64.iso/download'
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/loong64/deepin-desktop-community-25.2.0-loong64.iso/download',
+      unicamp: 'https://mirrors.ic.unicamp.br/deepin-cd/25.2.0/loong64/',
+      ufpr: 'https://deepin.c3sl.ufpr.br/deepin-cd/25.2.0/loong64/',
+      usp: 'http://sft.if.usp.br/deepin-cd/25.2.0/loong64/'
     },
     riscv64: {
       filename: 'deepin-desktop-community-25.2.0-riscv64.iso',
@@ -199,7 +239,10 @@
       base: 'https://cdimage.deepin.com/releases/25.2.0/riscv64/',
       sha256: 'ea5266d13a640eabc3b4cb7b893097a6416c5d457ae10bbd6bde0fc94e3ebe4a',
       torrent: 'https://storage.deepin.org/static/v25/deepin-desktop-community-25.2.0-riscv64.iso.torrent',
-      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/riscv64/deepin-desktop-community-25.2.0-riscv64.iso/download'
+      sourceforge: 'https://sourceforge.net/projects/deepin/files/25.2.0/riscv64/deepin-desktop-community-25.2.0-riscv64.iso/download',
+      unicamp: 'https://mirrors.ic.unicamp.br/deepin-cd/25.2.0/riscv64/',
+      ufpr: 'https://deepin.c3sl.ufpr.br/deepin-cd/25.2.0/riscv64/',
+      usp: 'http://sft.if.usp.br/deepin-cd/25.2.0/riscv64/'
     }
   };
 
@@ -211,6 +254,9 @@
     document.getElementById('linkDirect').href = a.base + a.filename;
     document.getElementById('linkTorrent').href = a.torrent;
     document.getElementById('linkSourceForge').href = a.sourceforge;
+    document.getElementById('linkUnicamp').href = a.unicamp + a.filename;
+    document.getElementById('linkUfpr').href = a.ufpr + a.filename;
+    document.getElementById('linkUsp').href = a.usp + a.filename;
     var cmdLinux = document.getElementById('cmdFilenameLinux');
     var cmdWin = document.getElementById('cmdFilenameWin');
     if (cmdLinux) cmdLinux.textContent = a.filename;
