@@ -56,8 +56,8 @@
 
       <div class="glass-card" style="padding:30px 32px;">
         <div class="eyebrow" style="margin-bottom:4px;">Versão estável</div>
-        <h2 style="font-size:1.6rem;margin-bottom:4px;">deepin 25.2.0</h2>
-        <p style="margin-bottom:0;">Lançado em 08/07/2026. Escolha a arquitetura do seu computador:</p>
+        <h2 style="font-size:1.6rem;margin-bottom:4px;">deepin 25.2.0 <span style="font-family:var(--font-mono);font-size:0.85rem;font-weight:400;color:var(--text-faint);">· lançado em 08/07/2026</span></h2>
+        <p style="margin-bottom:0;">Escolha a arquitetura do seu computador:</p>
 
         <div class="arch-tabs" id="archTabs">
           <button class="arch-tab active" data-arch="amd64">AMD64 <span class="sub">x86_64</span></button>
@@ -66,18 +66,15 @@
           <button class="arch-tab" data-arch="riscv64">RISC-V <span class="sub">riscv64</span></button>
         </div>
 
-        <p style="font-size:0.86rem;margin-bottom:2px;">
-          Arquivo: <code id="archFilename">deepin-desktop-community-25.2.0-amd64.iso</code>
-          · Tamanho aproximado: <strong id="archSize" style="color:var(--text);">6,5 GB</strong>
+        <p style="font-size:0.86rem;margin-bottom:6px;">
+          SHA256: <code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code>
         </p>
-
-        <div id="sha256Box" style="margin:10px 0 22px;">
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <span style="font-size:0.78rem;color:var(--text-faint);flex-shrink:0;">SHA256:</span>
-            <pre style="margin:0;display:inline-block;text-align:left;max-width:100%;"><code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code></pre>
-          </div>
-          <p style="font-size:0.8rem;margin-top:8px;color:var(--text-muted);">Fonte: <a id="sha256FallbackLink" href="#" target="_blank" rel="noopener" style="color:var(--accent-teal);">SHA256SUMS</a></p>
-        </div>
+        <p style="font-size:0.86rem;margin-bottom:6px;">
+          Arquivo: <code id="archFilename">deepin-desktop-community-25.2.0-amd64.iso</code>
+        </p>
+        <p style="font-size:0.86rem;margin-bottom:22px;">
+          Tamanho: <strong id="archSize" style="color:var(--text);">6,5 GB</strong>
+        </p>
 
         <div class="sources-grid">
           <div class="source-card">
@@ -262,7 +259,6 @@
     if (cmdLinux) cmdLinux.textContent = a.filename;
     if (cmdWin) cmdWin.textContent = a.filename;
     document.getElementById('sha256Value').textContent = a.sha256;
-    document.getElementById('sha256FallbackLink').href = a.base + 'SHA256SUMS';
   }
 
   document.querySelectorAll('.arch-tab').forEach(function (tab) {

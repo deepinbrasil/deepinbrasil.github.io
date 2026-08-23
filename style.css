@@ -173,7 +173,7 @@ p { color: var(--text-muted); margin: 0 0 1em; }
   z-index: 50;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
   padding: 0 4vw;
