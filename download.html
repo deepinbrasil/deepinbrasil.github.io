@@ -66,15 +66,20 @@
           <button class="arch-tab" data-arch="riscv64">RISC-V <span class="sub">riscv64</span></button>
         </div>
 
-        <p style="font-size:0.86rem;margin-bottom:6px;">
-          SHA256: <code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code>
-        </p>
-        <p style="font-size:0.86rem;margin-bottom:6px;">
-          Arquivo: <code id="archFilename">deepin-desktop-community-25.2.0-amd64.iso</code>
-        </p>
-        <p style="font-size:0.86rem;margin-bottom:22px;">
-          Tamanho: <strong id="archSize" style="color:var(--text);">6,5 GB</strong>
-        </p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:22px;">
+          <div style="display:flex;align-items:center;gap:0;font-size:0.86rem;">
+            <span style="display:inline-block;width:82px;flex-shrink:0;color:var(--text-muted);">SHA256:</span>
+            <code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code>
+          </div>
+          <div style="display:flex;align-items:center;gap:0;font-size:0.86rem;">
+            <span style="display:inline-block;width:82px;flex-shrink:0;color:var(--text-muted);">Arquivo:</span>
+            <code id="archFilename">deepin-desktop-community-25.2.0-amd64.iso</code>
+          </div>
+          <div style="display:flex;align-items:center;gap:0;font-size:0.86rem;">
+            <span style="display:inline-block;width:82px;flex-shrink:0;color:var(--text-muted);">Tamanho:</span>
+            <code id="archSize">6,5 GB</code>
+          </div>
+        </div>
 
         <div class="sources-grid">
           <div class="source-card">
