@@ -520,18 +520,13 @@ p {
 /* ===================== Cards de comunidade ===================== */
 .social-grid {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
   max-width: 100%;
   margin: 0 auto;
-  overflow-x: auto;
   padding-top: 8px;
   padding-bottom: 8px;
-  scrollbar-width: none;
-}
-.social-grid::-webkit-scrollbar {
-  display: none;
 }
 
 .social-card {

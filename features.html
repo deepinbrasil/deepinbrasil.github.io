@@ -37,7 +37,7 @@
 <div class="ambient"></div>
 <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
 
-<!-- Top bar centralizada -->
+<!-- Top bar centralizada com o botão de tema integrado no final -->
 <div class="dock-wrap">
   <nav class="dock" aria-label="Navegação principal">
     <a href="index.html" class="dock-brand">
@@ -50,17 +50,13 @@
       <a href="download.html" class="dock-item">Download</a>
       <a href="translate.html" class="dock-item">Tradução</a>
       <a href="coc.html" class="dock-item">Código de Conduta</a>
+      <button type="button" id="themeToggleBtn" class="dock-item theme-icon-btn" title="Alternar tema" aria-label="Alternar tema" style="background:none; border:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; padding: 0.5rem;">
+        <svg viewBox="0 0 16 16" fill="none" width="16" height="16">
+          <path d="M13.5 9.8A5.8 5.8 0 0 1 6.2 2.5a5.8 5.8 0 1 0 7.3 7.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
   </nav>
-</div>
-
-<!-- Ícone de tema isolado no canto superior direito -->
-<div class="theme-icon-wrap">
-  <button type="button" id="themeToggleBtn" class="theme-icon-btn" title="Alternar tema" aria-label="Alternar tema">
-    <svg viewBox="0 0 16 16" fill="none">
-      <path d="M13.5 9.8A5.8 5.8 0 0 1 6.2 2.5a5.8 5.8 0 1 0 7.3 7.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
-    </svg>
-  </button>
 </div>
 
 <main class="container">
