@@ -2,30 +2,48 @@
   const btn = document.getElementById('themeToggleBtn');
   if (!btn) return;
 
-  // Função para atualizar o desenho do ícone dentro do botão
   function updateThemeIcon(theme) {
     const iconSvg = btn.querySelector('svg');
     if (!iconSvg) return;
 
+    iconSvg.setAttribute('width', '22');
+    iconSvg.setAttribute('height', '22');
+    iconSvg.setAttribute('viewBox', '0 0 24 24');
+
     if (theme === 'dark') {
-      // Exibe o SOL quando está no escuro (para sugerir mudança para o claro)
+      // Sol geométrico preenchido (exibido no modo escuro para mudar pro claro)
+      iconSvg.setAttribute('fill', 'currentColor');
+      iconSvg.removeAttribute('stroke');
+      iconSvg.removeAttribute('stroke-width');
+      iconSvg.removeAttribute('stroke-linecap');
+      iconSvg.removeAttribute('stroke-linejoin');
       iconSvg.innerHTML = `
-        <circle cx="8" cy="8" r="3.5" stroke="currentColor" stroke-width="1.3"/>
-        <path d="M8 1.5V3M8 13v1.5M3.5 8H2M14 8h-1.5M4.3 4.3L5.4 5.4M10.6 10.6l1.1 1.1M4.3 11.7l1.1-1.1M10.6 5.4l1.1-1.1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="4.5"></circle>
+        <rect x="11" y="1" width="2" height="3" rx="1"></rect>
+        <rect x="11" y="20" width="2" height="3" rx="1"></rect>
+        <rect x="1" y="11" width="3" height="2" rx="1"></rect>
+        <rect x="20" y="11" width="3" height="2" rx="1"></rect>
+        <rect x="4.22" y="4.22" width="2.12" height="3" rx="1" transform="rotate(-45 5.28 5.72)"></rect>
+        <rect x="17.66" y="17.66" width="2.12" height="3" rx="1" transform="rotate(-45 18.72 19.16)"></rect>
+        <rect x="4.22" y="17.66" width="3" height="2.12" rx="1" transform="rotate(-45 5.72 18.72)"></rect>
+        <rect x="17.66" y="4.22" width="3" height="2.12" rx="1" transform="rotate(-45 19.16 5.72)"></rect>
       `;
     } else {
-      // Exibe a LUA quando está no claro (para sugerir mudança para o escuro)
+      // Lua preenchida (exibido no modo claro para mudar pro escuro)
+      iconSvg.setAttribute('fill', 'currentColor');
+      iconSvg.removeAttribute('stroke');
+      iconSvg.removeAttribute('stroke-width');
+      iconSvg.removeAttribute('stroke-linecap');
+      iconSvg.removeAttribute('stroke-linejoin');
       iconSvg.innerHTML = `
-        <path d="M13.5 9.8A5.8 5.8 0 0 1 6.2 2.5a5.8 5.8 0 1 0 7.3 7.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+        <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
       `;
     }
   }
 
-  // Define o ícone correto logo ao carregar a página com base no tema atual
   const initialTheme = document.documentElement.getAttribute('data-theme') || 'light';
   updateThemeIcon(initialTheme);
 
-  // Evento de clique para alternar o tema e atualizar o ícone
   btn.addEventListener('click', function () {
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -35,9 +53,7 @@
 
     try {
       localStorage.setItem('deepinbrasil-theme', newTheme);
-    } catch (e) {
-      // Ignora erros de armazenamento caso o navegador bloqueie
-    }
+    } catch (e) {}
 
     updateThemeIcon(newTheme);
   });
