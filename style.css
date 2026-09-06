@@ -209,14 +209,12 @@ h4,
    LARGURA DAS CAIXAS E CENTRALIZAÇÃO
    ========================================================= */
 
-/* Container principal (1080px, centralizado na tela) */
 .container {
   width: min(1080px, 92vw);
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-/* Blocos de texto, cabeçalhos e painéis (760px, centralizados na tela) */
 .section-head,
 .content-block,
 .page-hero,
@@ -236,7 +234,6 @@ h4,
   margin-right: 0;
 }
 
-/* Parágrafos gerais justificados e alinhados à esquerda (sem recuo) */
 .section-head p,
 .content-block p,
 .verify-panel p,
@@ -249,14 +246,12 @@ p {
   margin-bottom: 1em;
 }
 
-/* EXCLUSIVIDADE: Centraliza APENAS o subtítulo principal do index.html (hero) */
 .hero p.lede {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-/* GARANTIA: Mantém o subtítulo da página de recursos (features) alinhado à esquerda/justificado conforme o HTML */
 .page-hero .lede {
   text-align: left !important;
   margin-left: 0 !important;
@@ -517,7 +512,7 @@ p {
 .tile h3 { font-size: 1.05rem; text-align: left; }
 .tile p { margin-bottom: 0; font-size: 0.92rem; text-align: justify; margin-left: 0; margin-right: 0; }
 
-/* ===================== Cards de comunidade ===================== */
+/* ===================== Cards de comunidade (Corrigido para Mobile) ===================== */
 .social-grid {
   display: flex;
   flex-wrap: wrap;
@@ -651,7 +646,7 @@ p {
 }
 .content-block li { margin-bottom: 0.5em; text-align: justify; }
 
-/* ===================== Bloco .note corrigido (alinhado a 760px) ===================== */
+/* ===================== Bloco .note corrigido ===================== */
 .note {
   border: 1px dashed rgba(var(--accent-blue-rgb), 0.4);
   background: var(--accent-gradient-soft);
@@ -836,8 +831,31 @@ footer .fine-print {
   margin: 0;
 }
 
+/* =========================================================
+   CORREÇÃO DEFINITIVA PARA MOBILE (Evita corte nas redes sociais)
+   ========================================================= */
 @media (max-width: 640px) {
-  .dock-brand span { display: none; }
+  /* Mantém o texto da topbar visível ou ajustado sem quebrar o layout */
+  .dock-brand span { display: inline; }
+  
+  .dock {
+    justify-content: flex-start;
+    padding: 6px 10px;
+  }
+
+  /* Transforma os cards de comunidade em uma grade fluida no celular */
+  .social-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(140px, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 0 4px !important;
+  }
+
+  .social-card {
+    width: 100% !important;
+  }
+  
   .section { padding: 48px 0; }
   .footer-inner { flex-direction: column; text-align: center; }
 }
@@ -859,9 +877,6 @@ footer .fine-print {
   text-align: justify !important;
 }
 
-/* =========================================================
-   Correções específicas solicitadas (Itálico, Alinhamento e Espaçamento)
-   ========================================================= */
 .content-block p.italic-note {
   font-style: italic;
   opacity: 0.95;
