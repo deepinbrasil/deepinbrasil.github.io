@@ -314,7 +314,9 @@ p {
   gap: 2px;
 }
 
-/* ===================== Botão de tema (Minimalista / Sem círculo) ===================== */
+/* =========================================================
+   Correção do Ícone do Tema (Tamanho e Alinhamento)
+   ========================================================= */
 .theme-icon-wrap {
   position: fixed;
   top: 18px;
@@ -323,30 +325,35 @@ p {
 }
 
 .theme-icon-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: color 0.18s ease, transform 0.18s ease, background 0.18s ease;
-  padding: 0;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--text-muted) !important;
+  cursor: pointer !important;
+  transition: color 0.18s ease, transform 0.18s ease, background 0.18s ease !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
 }
 
 .theme-icon-btn:hover {
-  color: var(--text);
-  background: var(--hover-tint);
-  transform: translateY(-1px);
+  color: var(--text) !important;
+  background: var(--hover-tint) !important;
+  transform: translateY(-1px) !important;
 }
 
-.theme-icon-btn svg {
+.theme-icon-btn svg,
+.dock-item.theme-icon-btn svg {
   width: 22px !important;
   height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
+  display: block !important;
 }
 
 .dock-item {
@@ -369,6 +376,7 @@ p {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 13px 26px;
   border-radius: 999px;
@@ -414,6 +422,13 @@ p {
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 540px;
+}
+.hero-actions .btn {
+  flex: 1;
+  min-width: 240px;
+  text-align: center;
 }
 
 /* ===================== Cards / vidro ===================== */
@@ -445,7 +460,9 @@ p {
   .grid-3, .grid-2 { grid-template-columns: 1fr; }
 }
 
-/* ===================== Screenshots com Zoom no Hover ===================== */
+/* =========================================================
+   Efeito de Zoom e Expansão Suave para os Screenshots
+   ========================================================= */
 .shot-card {
   margin: 0;
   background: var(--surface-glass);
@@ -454,13 +471,17 @@ p {
   overflow: hidden;
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  will-change: transform;
 }
+
 .shot-card:hover { 
-  transform: translateY(-4px); 
-  border-color: rgba(var(--accent-blue-rgb), 0.5);
-  box-shadow: 0 16px 40px -15px rgba(0, 0, 0, 0.5);
+  transform: scale(1.04);
+  border-color: rgba(var(--accent-blue-rgb), 0.6);
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
+
 .shot-card img,
 .shot-card video {
   display: block;
@@ -469,12 +490,9 @@ p {
   object-fit: cover;
   object-position: top;
   background: var(--bg-elevated);
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: none; 
 }
-.shot-card:hover img,
-.shot-card:hover video {
-  transform: scale(1.06);
-}
+
 .shot-card figcaption {
   padding: 12px 16px;
   font-family: var(--font-display);
@@ -510,7 +528,7 @@ p {
 .tile h3 { font-size: 1.05rem; text-align: left; }
 .tile p { margin-bottom: 0; font-size: 0.92rem; text-align: justify; margin-left: 0; margin-right: 0; }
 
-/* ===================== Cards de comunidade (Corrigido para Mobile) ===================== */
+/* ===================== Cards de comunidade ===================== */
 .social-grid {
   display: flex;
   flex-wrap: wrap;
@@ -644,7 +662,7 @@ p {
 }
 .content-block li { margin-bottom: 0.5em; text-align: justify; }
 
-/* ===================== Bloco .note corrigido ===================== */
+/* ===================== Bloco .note ===================== */
 .note {
   border: 1px dashed rgba(var(--accent-blue-rgb), 0.4);
   background: var(--accent-gradient-soft);
@@ -688,7 +706,7 @@ code {
 }
 pre code { background: none; padding: 0; border-radius: 0; }
 
-/* ===================== Seletor de arquitetura (Pílulas de Tamanho Igual) ===================== */
+/* ===================== Seletor de arquitetura ===================== */
 .arch-tabs {
   display: flex;
   justify-content: center;
@@ -835,10 +853,9 @@ footer .fine-print {
 }
 
 /* =========================================================
-   CORREÇÃO DEFINITIVA PARA MOBILE (Redes sociais e SHA-256)
+   CORREÇÃO DEFINITIVA PARA MOBILE
    ========================================================= */
 @media (max-width: 640px) {
-  /* Mantém o texto da topbar visível ou ajustado sem quebrar o layout */
   .dock-brand span { display: inline; }
   
   .dock {
@@ -846,7 +863,6 @@ footer .fine-print {
     padding: 6px 10px;
   }
 
-  /* Transforma os cards de comunidade em uma grade fluida no celular */
   .social-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(140px, 1fr)) !important;
@@ -859,7 +875,6 @@ footer .fine-print {
     width: 100% !important;
   }
 
-  /* Quebra automática do SHA-256 e textos longos no mobile */
   .verify-panel, 
   .content-block, 
   .glass-card {
