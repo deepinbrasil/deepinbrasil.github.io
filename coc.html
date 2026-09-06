@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<script>(function(){var p;try{p=localStorage.getItem('deepinbrasil-theme')||'auto';}catch(e){p='auto';}var h=new Date().getHours();var r=(p==='auto')?((h>=6&&h<18)?'light':'dark'):p;document.documentElement.setAttribute('data-theme',r);document.documentElement.setAttribute('data-theme-pref',p);})();</script>
+<script>
+(function(){
+  var p;
+  try {
+    p = localStorage.getItem('deepinbrasil-theme');
+    if (!p) {
+      p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+  } catch(e) { 
+    p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  document.documentElement.setAttribute('data-theme', p);
+  document.documentElement.style.colorScheme = p;
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Código de Conduta • deepin Brasil</title>
@@ -17,6 +31,15 @@
 <div class="ambient"></div>
 <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
 
+<!-- Botão fixado no canto superior direito -->
+<div class="theme-icon-wrap">
+  <button type="button" id="themeToggleBtn" class="theme-icon-btn" title="Alternar tema" aria-label="Alternar tema">
+    <svg viewBox="0 0 16 16" fill="none">
+      <path d="M13.5 9.8A5.8 5.8 0 0 1 6.2 2.5a5.8 5.8 0 1 0 7.3 7.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</div>
+
 <div class="dock-wrap">
   <nav class="dock" aria-label="Navegação principal">
     <a href="index.html" class="dock-brand">
@@ -31,45 +54,36 @@
       <a href="coc.html" class="dock-item active">Código de Conduta</a>
     </div>
   </nav>
-  <div class="theme-toggle" role="group" aria-label="Tema do site">
-    <button type="button" data-pref="auto" title="Automático (segue o horário)" aria-label="Tema automático">
-      <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.4v1.3M4.1 3.5l.95.95M2.2 8h1.3M4.1 12.5l.95-.95" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="8" r="3.4" stroke="currentColor" stroke-width="1.3"/><path d="M8 4.6a3.4 3.4 0 0 1 0 6.8Z" fill="currentColor"/></svg>
-    </button>
-    <button type="button" data-pref="light" title="Tema claro" aria-label="Tema claro">
-      <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3.4" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.2v1.6M8 13.2v1.6M14.8 8h-1.6M2.8 8H1.2M12.7 3.3l-1.1 1.1M4.4 11.6l-1.1 1.1M12.7 12.7l-1.1-1.1M4.4 4.4 3.3 3.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-    </button>
-    <button type="button" data-pref="dark" title="Tema escuro" aria-label="Tema escuro">
-      <svg viewBox="0 0 16 16" fill="none"><path d="M13.5 9.8A5.8 5.8 0 0 1 6.2 2.5a5.8 5.8 0 1 0 7.3 7.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
-    </button>
-  </div>
 </div>
 
 <main class="container">
   <section class="page-hero">
-    <div class="eyebrow">Comunidade</div>
-    <h1>Código de Conduta</h1>
-    <p class="lede">As regras que mantêm a comunidade deepin Brasil um lugar seguro, respeitoso e produtivo para todo mundo — de quem está chegando agora a quem já contribui há anos.</p>
+    <div class="content-block">
+      <div class="eyebrow">Comunidade</div>
+      <h1>Código de Conduta</h1>
+      <p class="lede" style="max-width: 640px; text-align: justify;">As regras que mantêm a comunidade deepin Brasil um lugar seguro, respeitoso e produtivo para todo mundo — de quem está chegando agora a quem já contribui há anos.</p>
+    </div>
   </section>
 
   <section class="section">
     <div class="content-block">
-      <p>Este conjunto de princípios e valores visa orientar e disciplinar a conduta dos usuários dentro da comunidade.</p>
+      <p style="max-width: 640px; text-align: justify; margin-bottom: 2rem;">Este conjunto de princípios e valores visa orientar e disciplinar a conduta dos usuários dentro da comunidade.</p>
 
-      <h2>1. O Sistema Operacional</h2>
-      <p>O deepin é uma distribuição Linux baseada no Debian. Oferece um sistema refinado, seguro, fácil de usar e confiável aos usuários. É mantido pela Wuhan Deepin Technology Co., Ltd. — Deepin Technology, subsidiária da UnionTech Software Technology Co., Ltd. — UnionTech Software, sediada em Wuhan, China.</p>
+      <h4>1. O Sistema Operacional</h4>
+      <p style="max-width: 640px; text-align: justify;">O deepin é uma distribuição Linux baseada no Debian. Oferece um sistema refinado, seguro, fácil de usar e confiável aos usuários. É mantido pela Wuhan Deepin Technology Co., Ltd. — Deepin Technology, subsidiária da UnionTech Software Technology Co., Ltd. — UnionTech Software, sediada em Wuhan, China.</p>
 
-      <h2>2. A Comunidade Local</h2>
-      <p>A deepin Community of Brazil — deepin Brasil (estilizado com "d" minúsculo) é uma iniciativa comunitária independente e sem fins lucrativos. O alcance da comunidade será restrito às plataformas populares de fácil acesso, visando formar uma base sólida de usuários no país. As demandas relevantes serão encaminhadas à equipe de desenvolvimento, visando melhorar a compatibilidade da distribuição com o hardware brasileiro.</p>
+      <h4>2. A Comunidade Local</h4>
+      <p style="max-width: 640px; text-align: justify;">A deepin Community of Brazil — deepin Brasil (estilizado com "d" minúsculo) é uma iniciativa comunitária independente e sem fins lucrativos. O alcance da comunidade será restrito às plataformas populares de fácil acesso, visando formar uma base sólida de usuários no país. As demandas relevantes serão encaminhadas à equipe de desenvolvimento, visando melhorar a compatibilidade da distribuição com o hardware brasileiro.</p>
 
-      <h2>2.1 O Idioma</h2>
-      <p>Fica estabelecido que o idioma português do Brasil (pt-BR) seja adotado em toda a extensão da comunidade. Os falantes nativos de outros idiomas deverão ser encaminhados à comunidade internacional.</p>
+      <h4>2.1 O Idioma</h4>
+      <p style="max-width: 640px; text-align: justify;">Fica established que o idioma português do Brasil (pt-BR) seja adotado em toda a extensão da comunidade. Os falantes nativos de outros idiomas deverão ser encaminhados à comunidade internacional.</p>
 
-      <h2>2.2 A Política Antispam</h2>
-      <p>Não é permitida a divulgação de anúncios de compra e venda, material de conteúdo pago, ofertas de emprego e/ou contratação e canais/fóruns/grupos/páginas de terceiros (na dúvida, consulte a administração). Orienta-se que assuntos não relacionados ao Linux sejam evitados. Isso inclui assuntos aleatórios e principalmente sobre as remasterizações (que utilizam a interface Deepin Desktop Environment).</p>
-      <div class="note">"Nenhuma remasterização possui a curadoria da equipe de desenvolvimento; pois, estas criações são independentes e seus desenvolvedores são os únicos responsáveis pelo suporte."</div>
+      <h4>2.2 A Política Antispam</h4>
+      <p style="max-width: 640px; text-align: justify;">Não é permitida a divulgação de anúncios de compra e venda, material de conteúdo pago, ofertas de emprego e/ou contratação e canais/fóruns/grupos/páginas de terceiros (na dúvida, consulte a administração). Orienta-se que assuntos não relacionados ao Linux sejam evitados. Isso inclui assuntos aleatórios e principalmente sobre as remasterizações (que utilizam a interface Deepin Desktop Environment).</p>
+      <p class="italic-note" style="max-width: 640px; text-align: justify;">Nenhuma remasterização possui a curadoria da equipe de desenvolvimento; pois, estas criações são independentes e seus desenvolvedores são os únicos responsáveis pelo suporte.</p>
 
-      <h2>2.3 A Política Antiassédio e Antidiscriminação</h2>
-      <p>Não é tolerada nenhuma forma de assédio ou desrespeito aos integrantes da comunidade. Imagens e linguagem de caráter sexual e discriminatório não são apropriadas. A prática de assédio inclui comentários ofensivos — relacionados ao gênero, orientação sexual, aparência física, necessidades especiais, etnicidade, religião, posicionamento político e/ou status socioeconômico.</p>
+      <h4>2.3 A Política Antiassédio e Antidiscriminação</h4>
+      <p style="max-width: 640px; text-align: justify;">Não é tolerada nenhuma forma de assédio ou desrespeito aos integrantes da comunidade. Imagens e linguagem de caráter sexual e discriminatório não são apropriadas. A prática de assédio inclui comentários ofensivos — relacionados ao gênero, orientação sexual, aparência física, necessidades especiais, etnicidade, religião, posicionamento político e/ou status socioeconômico.</p>
     </div>
   </section>
 </main>
