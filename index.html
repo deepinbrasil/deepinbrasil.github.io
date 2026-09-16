@@ -3,17 +3,16 @@
 <head>
 <script>
 (function(){
-  var p;
+  var m = 'system';
   try {
-    p = localStorage.getItem('deepinbrasil-theme');
-    if (!p) {
-      p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-  } catch(e) { 
-    p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  document.documentElement.setAttribute('data-theme', p);
-  document.documentElement.style.colorScheme = p;
+    var s = localStorage.getItem('deepinbrasil-theme-mode');
+    if (s === 'system' || s === 'light' || s === 'dark') m = s;
+  } catch(e) {}
+  var r = (m === 'system')
+    ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    : m;
+  document.documentElement.setAttribute('data-theme', r);
+  document.documentElement.style.colorScheme = r;
 })();
 </script>
 <meta charset="UTF-8">

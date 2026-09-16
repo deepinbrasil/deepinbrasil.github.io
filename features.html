@@ -3,35 +3,28 @@
 <head>
 <script>
 (function(){
-  var p;
+  var m = 'system';
   try {
-    p = localStorage.getItem('deepinbrasil-theme');
-    if (!p) {
-      p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-  } catch(e) { 
-    p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  document.documentElement.setAttribute('data-theme', p);
-  document.documentElement.style.colorScheme = p;
+    var s = localStorage.getItem('deepinbrasil-theme-mode');
+    if (s === 'system' || s === 'light' || s === 'dark') m = s;
+  } catch(e) {}
+  var r = (m === 'system')
+    ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    : m;
+  document.documentElement.setAttribute('data-theme', r);
+  document.documentElement.style.colorScheme = r;
 })();
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recursos • deepin Brasil</title>
-<meta name="description" content="Conheça as principais características do deepin 25: DDE, UOS AI, Linyaps, Treeland, PipeWire, Solid e Distrobox."[cite: 1]>
+<meta name="description" content="Conheça as principais características do deepin 25: DDE, UOS AI, Linyaps, Treeland, PipeWire, Solid e Distrobox.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="stylesheet" href="style.css">
-<style>
-  /* Ajuste de espaçamento específico para afastar os cards do texto descritivo */
-  .section-head {
-    margin-bottom: 3rem !important;
-  }
-</style>
 </head>
 <body>
 <div class="ambient"></div>
@@ -50,29 +43,21 @@
       <a href="download.html" class="dock-item">Download</a>
       <a href="translate.html" class="dock-item">Tradução</a>
       <a href="coc.html" class="dock-item">Código de Conduta</a>
-      <button type="button" id="themeToggleBtn" class="dock-item theme-icon-btn" title="Alternar tema" aria-label="Alternar tema" style="background:none; border:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; padding: 0.5rem;">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button type="button" id="themeToggleBtn" class="dock-item theme-icon-btn" title="Alternar tema" aria-label="Alternar tema">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
       </button>
     </div>
   </nav>
 </div>
 
-<main class="container">
+<main class="container page-features">
   <section class="page-hero">
     <div class="content-block">
       <div class="eyebrow">deepin 25</div>
       <h1>Uma nova experiência Linux</h1>
-      <p class="lede" style="max-width: 640px; text-align: justify;">O deepin 25 combina uma experiência de desktop refinada com tecnologias modernas que tornam o sistema mais seguro, estável, flexível e preparado para o futuro[cite: 1].</p>
+      <p class="lede measure">O deepin 25 combina uma experiência de desktop refinada com tecnologias modernas que tornam o sistema mais seguro, estável, flexível e preparado para o futuro.</p>
     </div>
   </section>
 
@@ -82,7 +67,7 @@
       <div class="section-head">
         <div class="eyebrow">Experiência</div>
         <h2>O que você sente todo dia usando o sistema</h2>
-        <p style="max-width: 640px; text-align: left; margin: 0 auto;">Recursos focados em entregar design elegante, inteligência integrada e novas formas de gerenciar seus aplicativos com facilidade.</p>
+        <p class="measure">Recursos focados em entregar design elegante, inteligência integrada e novas formas de gerenciar seus aplicativos com facilidade.</p>
       </div>
 
       <div class="grid grid-3">
@@ -91,7 +76,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.6"/><circle cx="5.4" cy="5.5" r="0.7" fill="currentColor"/><circle cx="7.4" cy="5.5" r="0.7" fill="currentColor"/></svg>
           </div>
           <h3>DDE — Uma experiência de desktop única</h3>
-          <p style="text-align: justify;">O Deepin Desktop Environment combina design elegante, simplicidade e integração para oferecer uma experiência de desktop moderna e intuitiva.</p>
+          <p class="justify">O Deepin Desktop Environment combina design elegante, simplicidade e integração para oferecer uma experiência de desktop moderna e intuitiva.</p>
         </div>
 
         <div class="tile">
@@ -99,7 +84,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2.5 11.3 7 15.8 8.3 11.3 9.6 10 14.1 8.7 9.6 4.2 8.3 8.7 7 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M15.5 12.5 16 14l1.5.5L16 15l-.5 1.5L15 15l-1.5-.5L15 14l.5-1.5Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
           </div>
           <h3>UOS AI — Inteligência artificial integrada</h3>
-          <p style="text-align: justify;">Um agente de inteligência artificial integrado ao sistema para auxiliar nas tarefas do dia a dia e tornar sua experiência mais inteligente e produtiva.</p>
+          <p class="justify">Um agente de inteligência artificial integrado ao sistema para auxiliar nas tarefas do dia a dia e tornar sua experiência mais inteligente e produtiva.</p>
         </div>
 
         <div class="tile">
@@ -107,7 +92,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2 3 5.5v5C3 14.8 6 17.7 10 18.5c4-.8 7-3.7 7-8v-5L10 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           </div>
           <h3>Linyaps — Uma nova forma de instalar aplicativos</h3>
-          <p style="text-align: justify;">Um formato moderno de distribuição de aplicativos que oferece maior isolamento, compatibilidade e facilidade para instalar e manter seus programas.</p>
+          <p class="justify">Um formato moderno de distribuição de aplicativos que oferece maior isolamento, compatibilidade e facilidade para instalar e manter seus programas.</p>
         </div>
       </div>
     </div>
@@ -119,7 +104,7 @@
       <div class="section-head">
         <div class="eyebrow">Inovação</div>
         <h2>O que sustenta o sistema por baixo do capô</h2>
-        <p style="max-width: 640px; text-align: left; margin: 0 auto;">Tecnologias de ponta estruturadas para garantir performance gráfica avançada, áudio de alta fidelidade, segurança imutável e compatibilidade expandida.</p>
+        <p class="measure">Tecnologias de ponta estruturadas para garantir performance gráfica avançada, áudio de alta fidelidade, segurança imutável e compatibilidade expandida.</p>
       </div>
 
       <div class="grid grid-2">
@@ -128,7 +113,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="3" width="12" height="4.5" rx="1.2" stroke="currentColor" stroke-width="1.5"/><rect x="4" y="8.7" width="12" height="4.5" rx="1.2" stroke="currentColor" stroke-width="1.5"/><rect x="4" y="14.4" width="12" height="2.6" rx="1.2" stroke="currentColor" stroke-width="1.5"/></svg>
           </div>
           <h3>Treeland — Uma nova geração gráfica</h3>
-          <p style="text-align: justify;">Baseado em Wayland, o Treeland traz uma arquitetura gráfica moderna, preparada para oferecer uma experiência de desktop mais integrada e eficiente.</p>
+          <p class="justify">Baseado em Wayland, o Treeland traz uma arquitetura gráfica moderna, preparada para oferecer uma experiência de desktop mais integrada e eficiente.</p>
         </div>
 
         <div class="tile">
@@ -136,7 +121,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10h2.5l1.8-5 2.6 10 2-7 1.4 2h3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>PipeWire — Áudio e vídeo de nova geração</h3>
-          <p style="text-align: justify;">Uma infraestrutura moderna para áudio e vídeo, oferecendo uma base mais integrada para reprodução, gravação, transmissão e dispositivos multimídia.</p>
+          <p class="justify">Uma infraestrutura moderna para áudio e vídeo, oferecendo uma base mais integrada para reprodução, gravação, transmissão e dispositivos multimídia.</p>
         </div>
 
         <div class="tile">
@@ -144,7 +129,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2.3 16.5 5v5c0 4.4-2.8 7.3-6.5 8-3.7-.7-6.5-3.6-6.5-8V5L10 2.3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.3 10 9.2 11.9 12.9 8.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>Solid — Um sistema mais seguro e confiável</h3>
-          <p style="text-align: justify;">A arquitetura imutável do deepin protege os componentes essenciais do sistema e utiliza atualizações atômicas e snapshots para facilitar a recuperação e manter o sistema estável.</p>
+          <p class="justify">A arquitetura imutável do deepin protege os componentes essenciais do sistema e utiliza atualizações atômicas e snapshots para facilitar a recuperação e manter o sistema estável.</p>
         </div>
 
         <div class="tile">
@@ -152,7 +137,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2 3.5 5.5v9L10 18l6.5-3.5v-9L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M3.5 5.5 10 9l6.5-3.5M10 9v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>Distrobox — Mais possibilidades para seus aplicativos</h3>
-          <p style="text-align: justify;">Execute ambientes Debian, Ubuntu, Arch Linux e Fedora diretamente no deepin, ampliando a compatibilidade de softwares e oferecendo mais liberdade para criar ambientes de desenvolvimento.</p>
+          <p class="justify">Execute ambientes Debian, Ubuntu, Arch Linux e Fedora diretamente no deepin, ampliando a compatibilidade de softwares e oferecendo mais liberdade para criar ambientes de desenvolvimento.</p>
         </div>
       </div>
     </div>
@@ -164,7 +149,7 @@
     <div class="footer-brand">
       <a href="https://www.deepin.org" target="_blank" rel="noopener"><img src="wordmark.svg" alt="deepin" class="footer-wordmark"></a>
     </div>
-    <p class="fine-print">deepin Brasil - A comunidade deepin no Brasil &copy; <span id="year"></span></p>
+    <p class="fine-print">deepin Brasil - A comunidade deepin no Brasil</p>
   </div>
 </footer>
 

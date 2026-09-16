@@ -917,3 +917,57 @@ footer .fine-print {
 .content-block > p {
   max-width: 100% !important;
 }
+/* =========================================================
+   Classes migradas de estilos inline dos HTML
+   ========================================================= */
+
+/* Páginas de texto corrido (Código de Conduta) */
+.text-page p { max-width: 640px; text-align: justify; }
+p.mb-block, .mb-block { margin-bottom: 2rem; }
+
+/* Cartões de recurso (Recursos) */
+.tile p.justify { text-align: justify; }
+.section-head p.measure { max-width: 640px; margin: 0 auto; text-align: left; }
+.page-hero .lede.measure { max-width: 640px; text-align: justify; }
+
+/* Cabeçalho da versão (Download) */
+.card-pad { padding: 30px 32px; }
+.version-title { font-size: 1.6rem; margin-bottom: 4px; margin-left: 0; text-align: left; }
+.version-date { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 400; color: var(--text-faint); }
+.eyebrow.spaced { margin-top: 2.4rem; margin-bottom: 0.4rem; }
+
+/* Linhas de metadados (SHA256 / Arquivo / Tamanho) */
+.meta-stack { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.meta-row { display: flex; align-items: center; gap: 0; font-size: 0.86rem; }
+.meta-label { display: inline-block; width: 82px; flex-shrink: 0; color: var(--text-muted); }
+
+/* Divisor com rótulo (Mirrors brasileiros) */
+.divider-row { display: flex; align-items: center; gap: 10px; margin: 24px 0 16px; }
+.divider-row.tight { margin: 16px 0 16px; }
+.divider-label { font-size: 0.78rem; color: var(--accent-teal); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+.divider-line { flex: 1; height: 1px; background: var(--border-glass); }
+
+/* Blocos de comando copiáveis */
+.cmd-label { font-size: 0.78rem; color: var(--text-faint); margin: 14px 0 6px; }
+.cmd-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.cmd-row pre { flex: 1; min-width: 260px; margin: 0; }
+
+/* Painel de verificação */
+.panel-title-tight { margin-top: 0; margin-bottom: 1rem; }
+.panel-optional { color: var(--text-faint); font-weight: 400; font-size: 0.75rem; }
+p.panel-footnote { font-size: 0.86rem; margin-bottom: 0; margin-top: 14px; }
+
+/* Listas e botões */
+.steps-list { color: var(--text-muted); padding-left: 1.2em; }
+.btn-sm { padding: 9px 16px; font-size: 0.8rem; }
+.btn-compact { padding: 10px 20px; font-size: 0.85rem; }
+.btn-start { align-self: flex-start; }
+
+/* Pilha vertical de cartões (Tradução) */
+.card-stack { display: flex; flex-direction: column; gap: 14px; }
+
+/* Utilitário */
+p.mb-0, .mb-0 { margin-bottom: 0; }
+
+/* Espaçamento extra entre o texto descritivo e os cards (Recursos) */
+.page-features .section-head { margin-bottom: 3rem; }

@@ -75,6 +75,8 @@
     }
     document.documentElement.style.colorScheme = resolved;
     updateThemeIcon(mode);
+    // avisa o fundo de partículas para recolorir conforme o tema
+    document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: resolved } }));
   }
 
   // 1. Recupera o modo salvo ou assume 'system' por padrão

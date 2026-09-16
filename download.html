@@ -3,17 +3,16 @@
 <head>
 <script>
 (function(){
-  var p;
+  var m = 'system';
   try {
-    p = localStorage.getItem('deepinbrasil-theme');
-    if (!p) {
-      p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-  } catch(e) { 
-    p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  document.documentElement.setAttribute('data-theme', p);
-  document.documentElement.style.colorScheme = p;
+    var s = localStorage.getItem('deepinbrasil-theme-mode');
+    if (s === 'system' || s === 'light' || s === 'dark') m = s;
+  } catch(e) {}
+  var r = (m === 'system')
+    ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    : m;
+  document.documentElement.setAttribute('data-theme', r);
+  document.documentElement.style.colorScheme = r;
 })();
 </script>
 <meta charset="UTF-8">
@@ -44,9 +43,9 @@
       <a href="download.html" class="dock-item active">Download</a>
       <a href="translate.html" class="dock-item">Tradução</a>
       <a href="coc.html" class="dock-item">Código de Conduta</a>
-      <button type="button" id="themeToggleBtn" class="dock-item theme-icon-btn" title="Alternar tema" aria-label="Alternar tema" style="background:none; border:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; padding: 0.5rem;">
-        <svg id="themeIconSvg" viewBox="0 0 16 16" fill="none" width="16" height="16">
-          <path d="M13.5 9.8A5.8 5.8 0 0 1 6.2 2.5a5.8 5.8 0 1 0 7.3 7.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <button type="button" id="themeToggleBtn" class="dock-item theme-icon-btn" title="Alternar tema" aria-label="Alternar tema">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
         </svg>
       </button>
     </div>
@@ -65,35 +64,35 @@
   <section class="section">
     <div class="content-block">
 
-      <div class="glass-card" style="padding:30px 32px;">
-        <h2 style="font-size:1.6rem;margin-bottom:4px;margin-left:0;text-align:left;">deepin 25.2.0 <span style="font-family:var(--font-mono);font-size:0.85rem;font-weight:400;color:var(--text-faint);">· lançado em 08/07/2026</span></h2>
-        <p style="margin-bottom:0;">Escolha a arquitetura do seu computador:</p>
+      <div class="glass-card card-pad">
+        <h2 class="version-title">deepin 25.2.0 <span class="version-date">· lançado em 08/07/2026</span></h2>
+        <p class="mb-0">Escolha a arquitetura do seu computador:</p>
 
-        <div class="arch-tabs" id="archTabs" style="justify-content:center;">
+        <div class="arch-tabs" id="archTabs">
           <button class="arch-tab active" data-arch="amd64">AMD64 <span class="sub">x86_64</span></button>
           <button class="arch-tab" data-arch="arm64">ARM64 <span class="sub">aarch64</span></button>
           <button class="arch-tab" data-arch="loong64">LoongArch <span class="sub">loong64</span></button>
           <button class="arch-tab" data-arch="riscv64">RISC-V <span class="sub">riscv64</span></button>
         </div>
 
-        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:22px;">
-          <div style="display:flex;align-items:center;gap:0;font-size:0.86rem;">
-            <span style="display:inline-block;width:82px;flex-shrink:0;color:var(--text-muted);">SHA256:</span>
+        <div class="meta-stack">
+          <div class="meta-row">
+            <span class="meta-label">SHA256:</span>
             <code id="sha256Value">f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450</code>
           </div>
-          <div style="display:flex;align-items:center;gap:0;font-size:0.86rem;">
-            <span style="display:inline-block;width:82px;flex-shrink:0;color:var(--text-muted);">Arquivo:</span>
+          <div class="meta-row">
+            <span class="meta-label">Arquivo:</span>
             <code id="archFilename">deepin-desktop-community-25.2.0-amd64.iso</code>
           </div>
-          <div style="display:flex;align-items:center;gap:0;font-size:0.86rem;">
-            <span style="display:inline-block;width:82px;flex-shrink:0;color:var(--text-muted);">Tamanho:</span>
+          <div class="meta-row">
+            <span class="meta-label">Tamanho:</span>
             <code id="archSize">6,5 GB</code>
           </div>
         </div>
 
-        <div style="display:flex;align-items:center;gap:10px;margin:16px 0 16px;">
-          <span style="font-size:0.78rem;color:var(--accent-teal);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Servidores estrangeiros</span>
-          <span style="flex:1;height:1px;background:var(--border-glass);"></span>
+        <div class="divider-row tight">
+          <span class="divider-label">Servidores estrangeiros</span>
+          <span class="divider-line"></span>
         </div>
         <div class="sources-grid">
           <div class="source-card">
@@ -122,9 +121,9 @@
           </div>
         </div>
 
-        <div style="display:flex;align-items:center;gap:10px;margin:24px 0 16px;">
-          <span style="font-size:0.78rem;color:var(--accent-teal);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Servidores brasileiros</span>
-          <span style="flex:1;height:1px;background:var(--border-glass);"></span>
+        <div class="divider-row">
+          <span class="divider-label">Servidores brasileiros</span>
+          <span class="divider-line"></span>
         </div>
         <div class="sources-grid">
           <div class="source-card">
@@ -157,23 +156,23 @@
       <div class="verify-panel">
         <h2>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2 3 5v5c0 4.4 3 7.4 7 8 4-.6 7-3.6 7-8V5l-7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Verificação de integridade <span style="color:var(--text-faint);font-weight:400;font-size:0.75rem;">(opcional, mas recomendado)</span>
+          Verificação de integridade <span class="panel-optional">(opcional, mas recomendado)</span>
         </h2>
         <p>Depois de baixar, rode o comando abaixo (no sistema em que você está agora) e compare o resultado com o hash SHA256 mostrado acima, na seção de download. Se os dois valores forem idênticos, o arquivo baixado está íntegro.</p>
 
-        <div style="font-size:0.78rem;color:var(--text-faint);margin:14px 0 6px;">Linux / macOS — no terminal, na pasta onde está o arquivo:</div>
-        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-          <pre style="flex:1;min-width:260px;margin:0;"><code>sha256sum <span id="cmdFilenameLinux">deepin-desktop-community-25.2.0-amd64.iso</span></code></pre>
-          <button class="btn btn-ghost copy-cmd-btn" data-copy-target="cmdLinuxFull" style="padding:9px 16px;font-size:0.8rem;" type="button">Copiar</button>
+        <div class="cmd-label">Linux / macOS — no terminal, na pasta onde está o arquivo:</div>
+        <div class="cmd-row">
+          <pre><code>sha256sum <span id="cmdFilenameLinux">deepin-desktop-community-25.2.0-amd64.iso</span></code></pre>
+          <button class="btn btn-ghost copy-cmd-btn btn-sm" data-copy-target="cmdLinuxFull" type="button">Copiar</button>
         </div>
 
-        <div style="font-size:0.78rem;color:var(--text-faint);margin:14px 0 6px;">Windows — no PowerShell, na pasta onde está o arquivo:</div>
-        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-          <pre style="flex:1;min-width:260px;margin:0;"><code>Get-FileHash .\<span id="cmdFilenameWin">deepin-desktop-community-25.2.0-amd64.iso</span> -Algorithm SHA256</code></pre>
-          <button class="btn btn-ghost copy-cmd-btn" data-copy-target="cmdWinFull" style="padding:9px 16px;font-size:0.8rem;" type="button">Copiar</button>
+        <div class="cmd-label">Windows — no PowerShell, na pasta onde está o arquivo:</div>
+        <div class="cmd-row">
+          <pre><code>Get-FileHash .\<span id="cmdFilenameWin">deepin-desktop-community-25.2.0-amd64.iso</span> -Algorithm SHA256</code></pre>
+          <button class="btn btn-ghost copy-cmd-btn btn-sm" data-copy-target="cmdWinFull" type="button">Copiar</button>
         </div>
 
-        <p style="font-size:0.86rem;margin-bottom:0;margin-top:14px;">O comando devolve uma sequência de letras e números — é só olhar se bate, letra por letra, com o valor SHA256 mostrado mais acima nesta página. Se for diferente, o download veio corrompido: baixe novamente.</p>
+        <p class="panel-footnote">O comando devolve uma sequência de letras e números — é só olhar se bate, letra por letra, com o valor SHA256 mostrado mais acima nesta página. Se for diferente, o download veio corrompido: baixe novamente.</p>
       </div>
 
       <div class="download-card">
@@ -184,16 +183,16 @@
         <a class="btn btn-ghost" href="https://www.deepin.org/en/deepin-25-installation/" target="_blank" rel="noopener">Ver requisitos</a>
       </div>
 
-      <div class="eyebrow" style="margin-top:2.4rem;margin-bottom:0.4rem;">Pendrive bootável</div>
-      <h2 style="margin-top:0;margin-bottom:1rem;">Ventoy</h2>
+      <div class="eyebrow spaced">Pendrive bootável</div>
+      <h2 class="panel-title-tight">Ventoy</h2>
       <p>Pré-requisito: pendrive com no mínimo 8GB.</p>
-      <ol style="color:var(--text-muted);padding-left:1.2em;">
+      <ol class="steps-list">
         <li>Instale o Ventoy a partir do site oficial ou da loja de aplicativos do seu sistema operacional atual.</li>
         <li>Abra o Ventoy e selecione o pendrive. Nas opções, recomenda-se o uso do estilo de partição GPT (para sistemas UEFI) e a ativação do suporte ao Secure Boot — este último não é obrigatório.</li>
         <li>Clique em "Instalar" para que o aplicativo prepare o dispositivo e o torne bootável.</li>
         <li>Copie a imagem ISO do deepin para o pendrive.</li>
       </ol>
-      <a class="btn btn-ghost" style="align-self:flex-start;" href="https://www.ventoy.net/en/download.html" target="_blank" rel="noopener">Baixar o ventoy</a>
+      <a class="btn btn-ghost btn-start" href="https://www.ventoy.net/en/download.html" target="_blank" rel="noopener">Baixar o ventoy</a>
 
       <div class="note"><strong>Observação:</strong> o Ventoy permite que várias imagens ISO sejam utilizadas no mesmo pendrive, incluindo imagens do Windows. Seu uso não é exclusivo do deepin.</div>
     </div>
@@ -205,7 +204,7 @@
     <div class="footer-brand">
       <a href="https://www.deepin.org" target="_blank" rel="noopener"><img src="wordmark.svg" alt="deepin" class="footer-wordmark"></a>
     </div>
-    <p class="fine-print">deepin Brasil - A comunidade deepin no Brasil &copy; <span id="year"></span></p>
+    <p class="fine-print">deepin Brasil - A comunidade deepin no Brasil</p>
   </div>
 </footer>
 
