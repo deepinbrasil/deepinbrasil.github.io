@@ -530,9 +530,8 @@ p {
 
 /* ===================== Cards de comunidade ===================== */
 .social-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   max-width: 100%;
   margin: 0 auto;
@@ -545,8 +544,7 @@ p {
   align-items: center;
   gap: 10px;
   padding: 10px 18px;
-  width: 175px;
-  flex-shrink: 0;
+  width: 100%;
   justify-content: flex-start;
   border-radius: 999px;
   background: var(--surface-glass);
@@ -598,6 +596,8 @@ p {
 
 .sc-telegram:hover { border-color: rgba(42, 171, 238, 0.5); }
 .sc-telegram:hover .sc-icon { background: rgba(42, 171, 238, 0.18); color: #2aabee; }
+.sc-whatsapp:hover { border-color: rgba(37, 211, 102, 0.5); }
+.sc-whatsapp:hover .sc-icon { background: rgba(37, 211, 102, 0.18); color: #25d366; }
 
 .sc-x:hover { border-color: rgba(255, 255, 255, 0.35); }
 .sc-x:hover .sc-icon { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
