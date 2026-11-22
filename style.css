@@ -17,15 +17,17 @@
   --accent-blue-rgb: 63, 142, 240;
   --accent-teal-rgb: 51, 224, 196;
   --accent-gradient: linear-gradient(135deg, #3f8ef0 0%, #33e0c4 100%);
+  --hl: #1f6ee7;
+  --hl-rgb: 31, 110, 231;
   --accent-gradient-soft: linear-gradient(135deg, rgba(var(--accent-blue-rgb), 0.16) 0%, rgba(var(--accent-teal-rgb), 0.16) 100%);
   --hover-tint: rgba(255, 255, 255, 0.07);
   --dock-bg: rgba(16, 20, 29, 0.66);
   --dropdown-bg: rgba(16, 20, 29, 0.9);
   --code-bg: rgba(255, 255, 255, 0.06);
   --code-text: #d3e6ff;
-  --on-accent: #06111b;
-  --radius-lg: 28px;
-  --radius-md: 18px;
+  --on-accent: #ffffff;
+  --radius-lg: 12px;
+  --radius-md: 12px;
   --radius-sm: 12px;
   --shadow-soft: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
   --font-display: "Sora", "Segoe UI", sans-serif;
@@ -48,6 +50,8 @@
   --accent-blue-rgb: 47, 116, 214;
   --accent-teal-rgb: 15, 174, 149;
   --accent-gradient: linear-gradient(135deg, #2f74d6 0%, #0fae95 100%);
+  --hl: #1f6ee7;
+  --hl-rgb: 31, 110, 231;
   --accent-gradient-soft: linear-gradient(135deg, rgba(var(--accent-blue-rgb), 0.12) 0%, rgba(var(--accent-teal-rgb), 0.12) 100%);
   --hover-tint: rgba(20, 40, 80, 0.05);
   --dock-bg: rgba(255, 255, 255, 0.72);
@@ -57,7 +61,6 @@
   --on-accent: #ffffff;
   --shadow-soft: 0 20px 50px -26px rgba(30, 60, 110, 0.28);
 }
-
 
 * { box-sizing: border-box; }
 
@@ -279,7 +282,7 @@ p {
   padding: 8px;
   background: var(--dock-bg);
   border: 1px solid var(--border-glass);
-  border-radius: 999px;
+  border-radius: 12px;
   backdrop-filter: blur(22px) saturate(140%);
   -webkit-backdrop-filter: blur(22px) saturate(140%);
   box-shadow: var(--shadow-soft);
@@ -358,7 +361,7 @@ p {
 
 .dock-item {
   padding: 9px 16px;
-  border-radius: 999px;
+  border-radius: 12px;
   font-size: 0.88rem;
   color: var(--text-muted);
   white-space: nowrap;
@@ -368,7 +371,7 @@ p {
 .dock-item:hover { color: var(--text); background: var(--hover-tint); }
 .dock-item.active {
   color: var(--on-accent);
-  background: var(--accent-gradient);
+  background: var(--hl);
   font-weight: 600;
 }
 
@@ -379,7 +382,7 @@ p {
   justify-content: center;
   gap: 8px;
   padding: 13px 26px;
-  border-radius: 999px;
+  border-radius: 12px;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.92rem;
@@ -390,11 +393,11 @@ p {
 .btn:hover { transform: translateY(-2px); }
 
 .btn-primary {
-  background: var(--accent-gradient);
+  background: var(--hl);
   color: var(--on-accent);
-  box-shadow: 0 12px 30px -10px rgba(var(--accent-blue-rgb), 0.55);
+  box-shadow: 0 12px 30px -10px rgba(var(--hl-rgb), 0.55);
 }
-.btn-primary:hover { box-shadow: 0 16px 36px -8px rgba(var(--accent-teal-rgb), 0.55); }
+.btn-primary:hover { box-shadow: 0 16px 36px -8px rgba(var(--hl-rgb), 0.55); }
 
 .btn-ghost {
   background: var(--surface-glass);
@@ -546,7 +549,7 @@ p {
   padding: 10px 18px;
   width: 100%;
   justify-content: flex-start;
-  border-radius: 999px;
+  border-radius: 12px;
   background: var(--surface-glass);
   border: 1px solid var(--border-glass);
   backdrop-filter: blur(16px) saturate(140%);
@@ -686,7 +689,7 @@ p {
 pre {
   background: var(--bg-elevated);
   border: 1px solid var(--border-glass);
-  border-radius: 999px;
+  border-radius: 12px;
   padding: 18px 26px;
   overflow-x: auto;
   font-family: var(--font-mono);
@@ -702,7 +705,7 @@ code {
   font-size: 0.86rem;
   background: var(--code-bg);
   padding: 3px 12px;
-  border-radius: 999px;
+  border-radius: 12px;
 }
 pre code { background: none; padding: 0; border-radius: 0; }
 
@@ -719,7 +722,7 @@ pre code { background: none; padding: 0; border-radius: 0; }
   flex: 1;
   min-width: 140px;
   padding: 12px 18px;
-  border-radius: 999px;
+  border-radius: 12px;
   border: 1px solid var(--border-glass);
   background: var(--surface-glass);
   backdrop-filter: blur(14px);
@@ -739,7 +742,7 @@ pre code { background: none; padding: 0; border-radius: 0; }
 .arch-tab span.sub { font-family: var(--font-mono); font-weight: 400; font-size: 0.76rem; opacity: 0.7; }
 .arch-tab:hover { color: var(--text); border-color: rgba(var(--accent-blue-rgb), 0.4); }
 .arch-tab.active {
-  background: var(--accent-gradient);
+  background: var(--hl);
   color: var(--on-accent);
   border-color: transparent;
 }
@@ -979,3 +982,21 @@ p.mb-0, .mb-0 { margin-bottom: 0; }
 
 /* Espaçamento extra entre o texto descritivo e os cards (Recursos) */
 .page-features .section-head { margin-bottom: 3rem; }
+
+/* =========================================================
+   Raio de borda unificado (12px) nos elementos selecionados.
+   Cores e demais propriedades não são alteradas.
+   ========================================================= */
+.dock-item,
+.btn,
+.social-card,
+.arch-tab,
+
+pre,
+code { border-radius: 12px; }
+
+/* Campos SHA256 / Arquivo / Tamanho: caixa mais alta, para o raio de 12px ficar proporcional */
+.meta-row code { padding: 8px 14px; line-height: 1.4; }
+
+/* Caixas de comando com a mesma altura do botão Copiar ao lado */
+.cmd-row pre { height: 35px; padding: 0 16px; display: flex; align-items: center; }
